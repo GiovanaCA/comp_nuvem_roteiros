@@ -1,54 +1,104 @@
 ## Objetivo
 
-Aqui vai o objetivo macro do roteiro. Por que estamos fazendo o que estamos fazendo?
+O objetivo principal desse roteiro é 
+
+## Roteiro
+
+Para visualizar o arquivo PDF realizado e entregue, consultar o link a seguir: **[Roteiro 1 - PDF](./Roteiro_1_de_Cloud.pdf)**
 
 ## Montagem do Roteiro
 
-Os pontos "tarefas" são os passos que devem ser seguidos para a realização do roteiro. Eles devem ser claros e objetivos. Com evidências claras de que foram realizados.
+!!! warning
 
-### Tarefa 1
+    O formato e a quantidade de tarefas do roteiro feito (em 2024.2) é diferente do enunciado (de 2025.1), porém comentários são feitos para melhor compreensão e é majoritariamente seguido o mesmo conteúdo.
 
-<!-- ![Tela do Dashboard do MAAS](./maas.png) -->
-<!-- /// caption
-Dashboard do MAAS
-/// -->
 
-Conforme ilustrado acima, a tela inicial do MAAS apresenta um dashboard com informações sobre o estado atual dos servidores gerenciados. O dashboard é composto por diversos painéis, cada um exibindo informações sobre um aspecto específico do ambiente gerenciado. Os painéis podem ser configurados e personalizados de acordo com as necessidades do usuário.
+![Painel Django](imgs/roteiro1-000.png)
+/// caption
+Figura 1 - Painel Django acessado via tunelamento 
+///
 
-### Tarefa 2
+![Painel Django](imgs/roteiro1-001.png)
+/// caption
+Figura 2 - Dashboard do MAAS com as máquinas 
+///
 
-## App
+![Painel Django](imgs/roteiro1-002.png)
+/// caption
+Figura 3 - Aba imagens, com as imagens sincronizadas
+///
 
-### Tarefa 1
+![Painel Django](imgs/roteiro1-003.png)
+/// caption
+Figura 4 - Server 1: Network
+///
 
-### Tarefa 2
+![Painel Django](imgs/roteiro1-004.png)
+/// caption
+Figura 5 - Server 1: Commissioning 
+///
 
-Exemplo de diagrama
+![Painel Django](imgs/roteiro1-005.png)
+/// caption
+Figura 6 - Server 1: Testes 
+///
 
-```mermaid
-architecture-beta
-    group api(cloud)[API]
+![Painel Django](imgs/roteiro1-006.png)
+/// caption
+Figura 7 - Server 2: Network 
+///
 
-    service db(database)[Database] in api
-    service disk1(disk)[Storage] in api
-    service disk2(disk)[Storage] in api
-    service server(server)[Server] in api
+![Painel Django](imgs/roteiro1-007.png)
+/// caption
+Figura 8 - Server 2: Commissioning
+///
 
-    db:L -- R:server
-    disk1:T -- B:server
-    disk2:T -- B:db
-```
+![Painel Django](imgs/roteiro1-008.png)
+/// caption
+Figura 9 - Server 2: Testes 
+///
 
-[Mermaid](https://mermaid.js.org/syntax/architecture.html){:target="_blank"}
+![Painel Django](imgs/roteiro1-009.png)
+/// caption
+Figura 10 - Server 3: Network
+///
 
-## Questionário, Projeto ou Plano
+![Painel Django](imgs/roteiro1-010.png)
+/// caption
+Figura 11 - Server 3: Commissioning
+///
 
-Esse seção deve ser preenchida apenas se houver demanda do roteiro.
+![Painel Django](imgs/roteiro1-011.png)
+/// caption
+Figura 12 - Server 3: Tests
+///
 
-## Discussões
+![Painel Django](imgs/roteiro1-012.png)
+/// caption
+Figura 13 - Server 4: Network 
+///
 
-Quais as dificuldades encontradas? O que foi mais fácil? O que foi mais difícil?
+![Painel Django](imgs/roteiro1-013.png)
+/// caption
+Figura 14 - Server 4: Commissioning 
+///
 
-## Conclusão
+![Painel Django](imgs/roteiro1-014.png)
+/// caption
+Figura 15 - Server 4: Tests  
+///
 
-O que foi possível concluir com a realização do roteiro?
+![Painel Django](imgs/roteiro1-015.png)
+/// caption
+Figura 16 - Server 5: Network 
+///
+
+![Painel Django](imgs/roteiro1-016.png)
+/// caption
+Figura 17 - Server 5: Comissioning  
+///
+
+![Painel Django](imgs/roteiro1-017.png)
+/// caption
+Figura 18 - Server 5: Tests 
+///
