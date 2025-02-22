@@ -4,7 +4,7 @@ O objetivo principal desse roteiro é
 
 ## Roteiro
 
-Para visualizar o arquivo PDF realizado e entregue, consultar o link a seguir: **[Roteiro 1 - PDF](./Roteiro_1_de_Cloud.pdf)**
+Para visualizar o arquivo PDF feito e entregue, consultar o link a seguir: **[Roteiro 1 - PDF](./Roteiro_1_de_Cloud.pdf)**.
 
 ## Montagem do Roteiro
 
