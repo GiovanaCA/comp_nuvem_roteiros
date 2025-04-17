@@ -42,12 +42,18 @@ theme:
     - content.code.select
     - content.code.annotate
     - content.tooltips
-    - navigation.instant
+    - navigation.indexes
     - navigation.instant.progress
+    - navigation.sections
+    - navigation.tabs
     - navigation.top
     - navigation.path
     - navigation.tracking
     - navigation.expand
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
   icon:
     # logo: assets/images/devops
     admonition:
@@ -100,7 +106,6 @@ markdown_extensions:
   - pymdownx.blocks.caption
   - tables
 
-
 plugins:
   - glightbox
   - search
@@ -118,10 +123,18 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - Home: index.md
+  - Home: 
+    - index.md
   - Roteiros:
-    - Roteiro 1: ./roteiro1/main.md
-    - Roteiro 2: ./roteiro2/main.md
-    - Roteiro 3: ./roteiro3/main.md
-    - Roteiro 4: ./roteiro4/main.md
-  - Projeto: ./projeto/main.md
+    - Roteiro 1 MAAS: 
+      - Roteiro: roteiros/roteiro1/main.md
+    - Roteiro 2 JUJU:
+      - Roteiro: roteiros/roteiro2/main.md 
+    - Roteiro 3 OpenStack: 
+      - Roteiro: roteiros/roteiro3/main.md
+      - Relatório - Tarefa 4: roteiros/roteiro3/relatorio.md
+    - Roteiro 4: 
+      - Roteiro: roteiros/roteiro4/main.md
+  - Projeto: 
+    - Enunciado: ./projeto/enunciado.md
+    - Documentação: ./projeto/documentacao.md

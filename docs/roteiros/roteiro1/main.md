@@ -43,8 +43,8 @@ Subir uma aplicação Django.
     De um print das Telas abaixo:
     
         1. Do Dashboard do **MAAS** com as máquinas.
-        1. Da aba images, com as imagens sincronizadas.
-        1. Da Aba de cada maquina(5x) mostrando os testes de hardware e commissioning com Status "OK"
+        2. Da aba images, com as imagens sincronizadas.
+        3. Da Aba de cada maquina(5x) mostrando os testes de hardware e commissioning com Status "OK"
 
     ![Painel Django](imgs/roteiro1-000.png)
     /// caption
