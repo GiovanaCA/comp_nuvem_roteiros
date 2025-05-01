@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/</loc>
-         <lastmod>2025-03-11</lastmod>
+         <lastmod>2025-05-01</lastmod>
     </url>
     <url>
-         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/projeto/main/</loc>
-         <lastmod>2025-03-11</lastmod>
+         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/projeto/documentacao/</loc>
+         <lastmod>2025-05-01</lastmod>
     </url>
     <url>
-         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiro1/main/</loc>
-         <lastmod>2025-03-11</lastmod>
+         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/projeto/enunciado/</loc>
+         <lastmod>2025-05-01</lastmod>
     </url>
     <url>
-         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiro2/main/</loc>
-         <lastmod>2025-03-11</lastmod>
+         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiros/roteiro1/main/</loc>
+         <lastmod>2025-05-01</lastmod>
     </url>
     <url>
-         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiro3/main/</loc>
-         <lastmod>2025-03-11</lastmod>
+         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiros/roteiro2/main/</loc>
+         <lastmod>2025-05-01</lastmod>
     </url>
     <url>
-         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiro4/main/</loc>
-         <lastmod>2025-03-11</lastmod>
+         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiros/roteiro3/main/</loc>
+         <lastmod>2025-05-01</lastmod>
+    </url>
+    <url>
+         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiros/roteiro3/relatorio/</loc>
+         <lastmod>2025-05-01</lastmod>
+    </url>
+    <url>
+         <loc>https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiros/roteiro4/main/</loc>
+         <lastmod>2025-05-01</lastmod>
     </url>
 </urlset>

@@ -1,0 +1,2483 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Cassoni Andrade, G.; Hix, L.">
+      
+      
+        <link rel="canonical" href="https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiros/roteiro3/main/">
+      
+      
+        <link rel="prev" href="../../roteiro2/main/">
+      
+      
+        <link rel="next" href="../relatorio/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Roteiro - Computação em Nuvem</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M64%2032C28.7%2032%200%2060.7%200%2096v320c0%2035.3%2028.7%2064%2064%2064h224V368c0-26.5%2021.5-48%2048-48h112V96c0-35.3-28.7-64-64-64zm384%20320H336c-8.8%200-16%207.2-16%2016v112l32-32%2064-64z%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M96%200C43%200%200%2043%200%2096v320c0%2053%2043%2096%2096%2096h320c17.7%200%2032-14.3%2032-32s-14.3-32-32-32v-64c17.7%200%2032-14.3%2032-32V32c0-17.7-14.3-32-32-32H96m0%20384h256v64H96c-17.7%200-32-14.3-32-32s14.3-32%2032-32m32-240c0-8.8%207.2-16%2016-16h192c8.8%200%2016%207.2%2016%2016s-7.2%2016-16%2016H144c-8.8%200-16-7.2-16-16m16%2048h192c8.8%200%2016%207.2%2016%2016s-7.2%2016-16%2016H144c-8.8%200-16-7.2-16-16s7.2-16%2016-16%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-40-176h24v-64h-24c-13.3%200-24-10.7-24-24s10.7-24%2024-24h48c13.3%200%2024%2010.7%2024%2024v88h8c13.3%200%2024%2010.7%2024%2024s-10.7%2024-24%2024h-80c-13.3%200-24-10.7-24-24s10.7-24%2024-24m40-208a32%2032%200%201%201%200%2064%2032%2032%200%201%201%200-64%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M480%2032c0-12.9-7.8-24.6-19.8-29.6S434.5.2%20425.3%209.3L381.7%2053c-48%2048-113.1%2075-181%2075H64c-35.3%200-64%2028.7-64%2064v96c0%2035.3%2028.7%2064%2064%2064v128c0%2017.7%2014.3%2032%2032%2032h64c17.7%200%2032-14.3%2032-32V352h8.7c67.9%200%20133%2027%20181%2075l43.6%2043.6c9.2%209.2%2022.9%2011.9%2034.9%206.9s19.8-16.6%2019.8-29.6V300.3c18.6-8.8%2032-32.5%2032-60.4s-13.4-51.6-32-60.4zm-64%2076.7v262.6C357.2%20317.8%20280.5%20288%20200.7%20288H192v-96h8.7c79.8%200%20156.5-29.8%20215.3-83.3%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M438.6%20105.4c12.5%2012.5%2012.5%2032.8%200%2045.3l-256%20256c-12.5%2012.5-32.8%2012.5-45.3%200l-128-128c-12.5-12.5-12.5-32.8%200-45.3s32.8-12.5%2045.3%200L160%20338.7l233.4-233.3c12.5-12.5%2032.8-12.5%2045.3%200z%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%20512a256%20256%200%201%200%200-512%20256%20256%200%201%200%200%20512m-86.2-346.7c7.9-22.3%2029.1-37.3%2052.8-37.3h58.3c34.9%200%2063.1%2028.3%2063.1%2063.1%200%2022.6-12.1%2043.5-31.7%2054.8L280%20264.4c-.2%2013-10.9%2023.6-24%2023.6-13.3%200-24-10.7-24-24v-13.5c0-8.6%204.6-16.5%2012.1-20.8l44.3-25.4c4.7-2.7%207.6-7.7%207.6-13.1%200-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4%200-6.4%202.1-7.5%205.3l-.4%201.2c-4.4%2012.5-18.2%2019-30.6%2014.6s-19-18.2-14.6-30.6l.4-1.2zM224%20352a32%2032%200%201%201%2064%200%2032%2032%200%201%201-64%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M256%2032c14.2%200%2027.3%207.5%2034.5%2019.8l216%20368c7.3%2012.4%207.3%2027.7.2%2040.1S486.3%20480%20472%20480H40c-14.3%200-27.6-7.7-34.7-20.1s-7-27.8.2-40.1l216-368C228.7%2039.5%20241.8%2032%20256%2032m0%20128c-13.3%200-24%2010.7-24%2024v112c0%2013.3%2010.7%2024%2024%2024s24-10.7%2024-24V184c0-13.3-10.7-24-24-24m32%20224a32%2032%200%201%200-64%200%2032%2032%200%201%200%2064%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M459.1%2052.4%20442.6%206.5c-1.9-3.9-6.1-6.5-10.5-6.5s-8.5%202.6-10.4%206.5l-16.5%2045.9-46%2016.8c-4.3%201.6-7.3%205.9-7.2%2010.4%200%204.5%203%208.7%207.2%2010.2l45.7%2016.8%2016.8%2045.8c1.5%204.4%205.8%207.5%2010.4%207.5s8.9-3.1%2010.4-7.5l16.5-45.8%2045.7-16.8c4.2-1.5%207.2-5.7%207.2-10.2%200-4.6-3-8.9-7.2-10.4zm-132.4%2053c-12.5-12.5-32.8-12.5-45.3%200l-2.9%202.9c-22-8-45.8-12.3-70.5-12.3C93.1%2096%200%20189.1%200%20304s93.1%20208%20208%20208%20208-93.1%20208-208c0-24.7-4.3-48.5-12.2-70.5l2.9-2.9c12.5-12.5%2012.5-32.8%200-45.3l-80-80zM200%20192c-57.4%200-104%2046.6-104%20104v8c0%208.8-7.2%2016-16%2016s-16-7.2-16-16v-8c0-75.1%2060.9-136%20136-136h8c8.8%200%2016%207.2%2016%2016s-7.2%2016-16%2016z%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M416%20398.9c58.5-41.1%2096-104.1%2096-174.9C512%20100.3%20397.4%200%20256%200S0%20100.3%200%20224c0%2070.7%2037.5%20133.8%2096%20174.9V464c0%2026.5%2021.5%2048%2048%2048h48v-48c0-8.8%207.2-16%2016-16s16%207.2%2016%2016v48h64v-48c0-8.8%207.2-16%2016-16s16%207.2%2016%2016v48h48c26.5%200%2048-21.5%2048-48v-65.1M96%20256a64%2064%200%201%201%20128%200%2064%2064%200%201%201-128%200m256-64a64%2064%200%201%201%200%20128%2064%2064%200%201%201%200-128%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20640%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M320%200c17.7%200%2032%2014.3%2032%2032v64h120c39.8%200%2072%2032.2%2072%2072v272c0%2039.8-32.2%2072-72%2072H168c-39.8%200-72-32.2-72-72V168c0-39.8%2032.2-72%2072-72h120V32c0-17.7%2014.3-32%2032-32M208%20384c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zm96%200c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zm96%200c-8.8%200-16%207.2-16%2016s7.2%2016%2016%2016h32c8.8%200%2016-7.2%2016-16s-7.2-16-16-16zM264%20256a40%2040%200%201%200-80%200%2040%2040%200%201%200%2080%200m152%2040a40%2040%200%201%200%200-80%2040%2040%200%201%200%200%2080M48%20224h16v192H48c-26.5%200-48-21.5-48-48v-96c0-26.5%2021.5-48%2048-48m544%200c26.5%200%2048%2021.5%2048%2048v96c0%2026.5-21.5%2048-48%2048h-16V224z%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M288%200H128c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032v132.8c0%2011.8-3.3%2023.5-9.5%2033.5L10.3%20406.2C3.6%20417.2%200%20429.7%200%20442.6%200%20480.9%2031.1%20512%2069.4%20512h309.2c38.3%200%2069.4-31.1%2069.4-69.4%200-12.8-3.6-25.4-10.3-36.4L329.5%20230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7%200%2032-14.3%2032-32S337.7%200%20320%200zm-96%20196.8V64h64v132.8c0%2023.7%206.6%2046.9%2019%2067.1l34.5%2056.1h-171l34.5-56.1c12.4-20.2%2019-43.4%2019-67.1%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%3E%3C%21--%21%20Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A//fontawesome.com%20License%20-%20https%3A//fontawesome.com/license/free%20%28Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License%29%20Copyright%202024%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M0%20216C0%20149.7%2053.7%2096%20120%2096h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064H64c-35.3%200-64-28.7-64-64V216m256%200c0-66.3%2053.7-120%20120-120h8c17.7%200%2032%2014.3%2032%2032s-14.3%2032-32%2032h-8c-30.9%200-56%2025.1-56%2056v8h64c35.3%200%2064%2028.7%2064%2064v64c0%2035.3-28.7%2064-64%2064h-64c-35.3%200-64-28.7-64-64V216%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/badge.css">
+    
+      <link rel="stylesheet" href="../../../termynal.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objetivo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Computação em Nuvem" class="md-header__button md-logo" aria-label="Computação em Nuvem" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Computação em Nuvem
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Roteiro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/GiovanaCA/comp_nuvem_roteiros" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github/comp_nuvem_roteiros
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../roteiro1/main/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Roteiros
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../projeto/enunciado/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Computação em Nuvem" class="md-nav__button md-logo" aria-label="Computação em Nuvem" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Computação em Nuvem
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/GiovanaCA/comp_nuvem_roteiros" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github/comp_nuvem_roteiros
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roteiros
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 1 MAAS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiro 1 MAAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiro1/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roteiro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 2 JUJU
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiro 2 JUJU
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiro2/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roteiro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 3 OpenStack
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiro 3 OpenStack
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Roteiro
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roteiro
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roteiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roteiro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#montagem-do-roteiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Montagem do Roteiro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infra-nuvem-vm-servidor-virtual-privado-vps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infra (Nuvem VM) - Servidor Virtual Privado (VPS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infra (Nuvem VM) - Servidor Virtual Privado (VPS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implantacao-do-openstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implantação do OpenStack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-juju-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 - Juju Controller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modelo-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 - Modelo de deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ceph-osd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 - Ceph OSD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-nova-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 - Nova Compute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mysql-innodb-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 - MySQL InnoDB Cluster
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 - Vault
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-neutron-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 - Neutron Networking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-keystone" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 - Keystone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-rabbitmq" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 - RabbitMQ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-nova-cloud-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 - Nova Cloud Controller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      11 - Placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-horizon-openstack-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      12 - Horizon - OpenStack Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      13 - Glance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-ceph-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      14 - Ceph Monitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-cinder" class="md-nav__link">
+    <span class="md-ellipsis">
+      15 - Cinder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-ceph-rados-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      16 - Ceph RADOS Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ceph-osd-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      17 - Ceph-OSD Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-o-openstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando o Openstack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurando o Openstack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-1-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 1: Autenticação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-2-horizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 2: Horizon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-3-imagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 3: Imagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-4-rede-externa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 4: Rede Externa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-5-rede-interna-e-roteador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 5: Rede Interna e Roteador
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-6-flavors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 6: Flavors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-7-conexao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 7: Conexão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-8-instancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 8: Instância
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalando-os-nos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalando os nós
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app-uso-da-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      App - Uso da infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Relatório - Tarefa 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roteiro 4
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Roteiro 4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiro4/main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Roteiro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projeto/enunciado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enunciado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projeto/documentacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roteiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Roteiro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#montagem-do-roteiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Montagem do Roteiro
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infra-nuvem-vm-servidor-virtual-privado-vps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infra (Nuvem VM) - Servidor Virtual Privado (VPS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Infra (Nuvem VM) - Servidor Virtual Privado (VPS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implantacao-do-openstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implantação do OpenStack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-juju-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 - Juju Controller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modelo-de-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 - Modelo de deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ceph-osd" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 - Ceph OSD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-nova-compute" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 - Nova Compute
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mysql-innodb-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 - MySQL InnoDB Cluster
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      6 - Vault
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-neutron-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      7 - Neutron Networking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-keystone" class="md-nav__link">
+    <span class="md-ellipsis">
+      8 - Keystone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-rabbitmq" class="md-nav__link">
+    <span class="md-ellipsis">
+      9 - RabbitMQ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-nova-cloud-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      10 - Nova Cloud Controller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      11 - Placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-horizon-openstack-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      12 - Horizon - OpenStack Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      13 - Glance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-ceph-monitor" class="md-nav__link">
+    <span class="md-ellipsis">
+      14 - Ceph Monitor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-cinder" class="md-nav__link">
+    <span class="md-ellipsis">
+      15 - Cinder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-ceph-rados-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      16 - Ceph RADOS Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ceph-osd-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      17 - Ceph-OSD Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-o-openstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando o Openstack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurando o Openstack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-1-autenticacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 1: Autenticação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-2-horizon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 2: Horizon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-3-imagens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 3: Imagens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-4-rede-externa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 4: Rede Externa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-5-rede-interna-e-roteador" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 5: Rede Interna e Roteador
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-6-flavors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 6: Flavors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-7-conexao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 7: Conexão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-8-instancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo 8: Instância
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escalando-os-nos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escalando os nós
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app-uso-da-infraestrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      App - Uso da infraestrutura
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Roteiro</h1>
+
+<h2 id="objetivo">Objetivo</h2>
+<p>O objetivo principal desse roteiro é:</p>
+<ul>
+<li>entender os conceitos básicos de Private Cloud</li>
+<li>aprofundar conceitos sobre redes virtuais SDN</li>
+</ul>
+<h2 id="roteiro">Roteiro</h2>
+<p>Para visualizar o arquivo PDF feito e entregue, consultar o link a seguir: <strong><a href="../Roteiro_3_de_Cloud.pdf">Roteiro 3 - PDF</a></strong>.</p>
+<h2 id="montagem-do-roteiro">Montagem do Roteiro</h2>
+<p>O OpenStack é um conjunto de componentes de software que oferecem serviços comuns para a infraestrutura de cloud.</p>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-openstack.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="OpenStack" src="../imgs/roteiro3-openstack.png" /></a></p>
+<figcaption>
+<p>Figura 1 - OpenStack. Fonte: <a href="https://www.openstack.org/" target="_blank">https://www.openstack.org/</a></p>
+</figcaption>
+</figure>
+<h2 id="infra-nuvem-vm-servidor-virtual-privado-vps">Infra (Nuvem VM) - Servidor Virtual Privado (VPS)</h2>
+<p>O OpenStack permitirá distribuir virtual machines usando os nós disponíveis no kit, mas antes de iniciar a instalação, deve-se verificar se o MAAS está configurado corretamente.</p>
+<p>A documentação oficial do OpenStack está presente no link a seguir: <a href="https://docs.openstack.org/project-deploy-guide/charm-deployment-guide/latest/install-openstack.html#openstack-release" target="_blank">Implantação do OpenStack</a></p>
+<h3 id="implantacao-do-openstack">Implantação do OpenStack</h3>
+<ul>
+<li>Nesse ambiente, o Juju controller deve estar instalado no server1;</li>
+<li>Para monitorar o status da instalação, usar o comando:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>--color<span class="w"> </span><span class="s2">&quot;juju status --color&quot;</span>
+</span></code></pre></div></li>
+</ul>
+<div class="admonition failure">
+<p class="admonition-title">Erro de instalação</p>
+<p>No caso de problemas durante a instalação, dependendo da gravidade do problema, é mais simples limpar a instalação:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>juju<span class="w"> </span>kill-controller<span class="w"> </span>maas-controller
+</span></code></pre></div>
+<p>E reiniciar desde <a href="#1-juju-controller">1 - Juju Controller</a>.</p>
+</div>
+<div class="admonition aviso">
+<p class="admonition-title">Aviso</p>
+<p>O roteiro feito, em 2024.2, possui uma versão antiga dos comandos utilizados. Durante essa documentação do roteiro, serão apresentados os comandos utilizados na realização do roteiro, e os comandos atualizados estarão apresentados em notas intituladas <strong>Nova Versão</strong>.</p>
+</div>
+<h3 id="1-juju-controller">1 - Juju Controller</h3>
+<p>Apenas se ainda não tiver um Juju Controller, adicionar a tag controller na máquina server1:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>juju<span class="w"> </span>bootstrap<span class="w"> </span>--bootstrap-series<span class="o">=</span>jammy<span class="w"> </span>--constraints<span class="w"> </span><span class="nv">tags</span><span class="o">=</span>controller<span class="w"> </span>maas-one<span class="w"> </span>maas-controller
+</span></code></pre></div>
+<h3 id="2-modelo-de-deploy">2 - Modelo de deploy</h3>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>juju<span class="w"> </span>add-model<span class="w"> </span>--config<span class="w"> </span>default-series<span class="o">=</span>jammy<span class="w"> </span>openstack
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>juju<span class="w"> </span>switch<span class="w"> </span>maas-controller:openstack
+</span></code></pre></div>
+<h3 id="3-ceph-osd">3 - Ceph OSD</h3>
+<p>O aplicativo ceph-osd é implantado em 3 nós usando o charm ceph-osd, com os dispositivos de armazenamento <code>/dev/sda</code> e <code>/dev/sdb</code> configurados para uso em todos os nós no arquivo <strong>ceph-osd.yaml</strong>. É utilizada a tag compute, definida previamente nos nós via MAAS, com o comando juju deploy especificando as 3 máquinas e a configuração das mesmas. Para fazer o deploy da aplicação ceph-osd:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--channel<span class="w"> </span>reef/stable<span class="w"> </span>--config<span class="w"> </span>ceph-osd.yaml<span class="w"> </span>--constraints<span class="w"> </span><span class="nv">tags</span><span class="o">=</span>compute<span class="w"> </span>ceph-osd
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--channel<span class="w"> </span>quincy/stable<span class="w"> </span>--config<span class="w"> </span>ceph-osd.yaml<span class="w"> </span>--constraints<span class="w"> </span><span class="nv">tags</span><span class="o">=</span>compute<span class="w"> </span>ceph-osd
+</span></code></pre></div>
+</details>
+<h3 id="4-nova-compute">4 - Nova Compute</h3>
+<p>O nova-compute, responsável por provisionar instâncias de computação no OpenStack, deve ser implantado nos nós de computação usando os IDs das máquinas (0, 1 e 2), pois não há mais nós MAAS disponíveis. Isso implica em compartilhar os mesmos nós entre múltiplos serviços. É feito o arquivo de configuração <strong>nova-compute.yaml</strong>, e para o deploy:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>--to<span class="w"> </span><span class="m">1</span>,2<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>--config<span class="w"> </span>nova-compute.yaml<span class="w"> </span>nova-compute
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--to<span class="w"> </span><span class="m">0</span>,1,2<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>--config<span class="w"> </span>nova-compute.yaml<span class="w"> </span>nova-compute
+</span></code></pre></div>
+</details>
+<h3 id="5-mysql-innodb-cluster">5 - MySQL InnoDB Cluster</h3>
+<p>MySQL InnoDB Cluster requer no mínimo 3 unidades de banco de dados, e ele deve implantado com o atributo mysql-innodb-cluster, sendo conteinerizados nas máquinas 0, 1 e 2, fazendo o deploy como indicado:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--to<span class="w"> </span>lxd:0,lxd:1,lxd:2<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-innodb-cluster
+</span></code></pre></div>
+<h3 id="6-vault">6 - Vault</h3>
+<p>O Vault gerencia os certificados TLS que permitem a comunicação criptografada entre aplicativos em nuvem, e ele é conteinerizado na máquina 2:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:0<span class="w"> </span>--channel<span class="w"> </span><span class="m">1</span>.8/stable<span class="w"> </span>vault
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>vault<span class="w"> </span>--channel<span class="w"> </span><span class="m">1</span>.8/stable
+</span></code></pre></div>
+</details>
+<p>Os passos seguintes são de acordo com as intruções abaixo, com os seus respectivos comandos:</p>
+<ul>
+<li>criar instância específica do mysql-router com o charme subordinado mysql-router;</li>
+<li>adicionar relação entre instância mysql-router e o banco de dados;</li>
+<li>adicionar relação entre instância mysql-router e o aplicativo.</li>
+</ul>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-router<span class="w"> </span>vault-mysql-router
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>vault-mysql-router:db-router<span class="w"> </span>mysql-innodb-cluster:db-router
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>vault-mysql-router:shared-db<span class="w"> </span>vault:shared-db
+</span></code></pre></div>
+<p>Para o Vault ser inicializado, desbloqueado e autorizado, são executados os comandos a seguir com os seguintes propósitos:</p>
+<ul>
+<li>Instalando o cli do Vault;</li>
+<li>Configurando o cli;</li>
+<li>Gerando-os;</li>
+<li>Remover o selo de 3 teclas (usar esse comando 3 vezes);</li>
+<li>Confirgurando o token;</li>
+<li>Gerando um token (tempo dos próximos passos de 10 minutos);</li>
+<li>Autorizando.</li>
+</ul>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>vault
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">VAULT_ADDR</span><span class="o">=</span><span class="s2">&quot;http://&lt;IP of vault&gt;:8200&quot;</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>vault<span class="w"> </span>operator<span class="w"> </span>init<span class="w"> </span>-key-shares<span class="o">=</span><span class="m">5</span><span class="w"> </span>-key-threshold<span class="o">=</span><span class="m">3</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>vault<span class="w"> </span>operator<span class="w"> </span>unseal<span class="w"> </span>&lt;Unseal<span class="w"> </span>Key&gt;
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">VAULT_TOKEN</span><span class="o">=</span>&lt;Initial<span class="w"> </span>Root<span class="w"> </span>Token&gt;
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>vault<span class="w"> </span>token<span class="w"> </span>create<span class="w"> </span>-ttl<span class="o">=</span>10m
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>juju<span class="w"> </span>run<span class="w"> </span>vault/0<span class="w"> </span>authorize-charm<span class="w"> </span><span class="nv">token</span><span class="o">=</span>&lt;Token<span class="w"> </span>generated<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>last<span class="w"> </span>command&gt;
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>juju<span class="w"> </span>run<span class="w"> </span>vault/leader<span class="w"> </span>authorize-charm<span class="w"> </span><span class="nv">token</span><span class="o">=</span>&lt;Token<span class="w"> </span>generated<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>last<span class="w"> </span>command&gt;
+</span></code></pre></div>
+</details>
+<p>Para o Vault, é preciso um certificado de CA autoassinado para que ele possa emitir os certificados para serviços de API em nuvem.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>juju<span class="w"> </span>run<span class="w"> </span>vault/0<span class="w"> </span>generate-root-ca
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>juju<span class="w"> </span>run<span class="w"> </span>vault/leader<span class="w"> </span>generate-root-ca
+</span></code></pre></div>
+</details>
+<p>Os aplicativos em nuvem são habilitados para TLS por meio da relação vault:certificates.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>mysql-innodb-cluster:certificates<span class="w"> </span>vault:certificates
+</span></code></pre></div>
+<h3 id="7-neutron-networking">7 - Neutron Networking</h3>
+<p>A rede de nêutrons é implementada com 4 aplicações, com o arquivo <strong>neutron.yaml</strong> configurando apenas as aplicações neutron-api e ovn-chassis, e com isso são feitos os deploys:</p>
+<ul>
+<li><strong>ovn-central</strong>: no mínimo 3 unidades -&gt; conteinerizadas nas máquinas 0, 1 e 2.</li>
+<li><strong>neutron-api</strong>: conteinerizado na máquina 1.</li>
+<li><strong>neutron-api-plugin-ovn (subordinado)</strong>: aplicação charm subordinada.</li>
+<li><strong>ovn-chassis (subordinado)</strong>: aplicação charm subordinada.</li>
+</ul>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--to<span class="w"> </span>lxd:0,lxd:1,lxd:2<span class="w"> </span>--channel<span class="w"> </span><span class="m">23</span>.09/stable<span class="w"> </span>ovn-central
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:1<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>--config<span class="w"> </span>neutron.yaml<span class="w"> </span>neutron-api
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>neutron-api-plugin-ovn
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">23</span>.09/stable<span class="w"> </span>--config<span class="w"> </span>neutron.yaml<span class="w"> </span>ovn-chassis
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--to<span class="w"> </span>lxd:0,lxd:1,lxd:2<span class="w"> </span>--channel<span class="w"> </span><span class="m">22</span>.03/stable<span class="w"> </span>ovn-central
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:1<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>--config<span class="w"> </span>neutron.yaml<span class="w"> </span>neutron-api
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>neutron-api-plugin-ovn
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">22</span>.03/stable<span class="w"> </span>--config<span class="w"> </span>neutron.yaml<span class="w"> </span>ovn-chassis
+</span></code></pre></div>
+</details>
+<p>São adicionadas as relações necessárias:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>neutron-api-plugin-ovn:neutron-plugin<span class="w"> </span>neutron-api:neutron-plugin-api-subordinate
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>neutron-api-plugin-ovn:ovsdb-cms<span class="w"> </span>ovn-central:ovsdb-cms
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ovn-chassis:ovsdb<span class="w"> </span>ovn-central:ovsdb
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ovn-chassis:nova-compute<span class="w"> </span>nova-compute:neutron-plugin
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>juju<span class="w"> </span>integrate<span class="w"> </span>neutron-api:certificates<span class="w"> </span>vault:certificates
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>juju<span class="w"> </span>integrate<span class="w"> </span>neutron-api-plugin-ovn:certificates<span class="w"> </span>vault:certificates
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ovn-central:certificates<span class="w"> </span>vault:certificates
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ovn-chassis:certificates<span class="w"> </span>vault:certificates
+</span></code></pre></div>
+<p>Conectando a neutron-api ao banco de dados na nuvem:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-router<span class="w"> </span>neutron-api-mysql-router
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>neutron-api-mysql-router:db-router<span class="w"> </span>mysql-innodb-cluster:db-router
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>neutron-api-mysql-router:shared-db<span class="w"> </span>neutron-api:shared-db
+</span></code></pre></div>
+<h3 id="8-keystone">8 - Keystone</h3>
+<p>Aplicação Keystone conteinerizada na máquina 0, com deploy: </p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:0<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>keystone
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:0<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>keystone
+</span></code></pre></div>
+</details>
+<p>Conectando o Keystone ao banco de dados na nuvem:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-router<span class="w"> </span>keystone-mysql-router
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>keystone-mysql-router:db-router<span class="w"> </span>mysql-innodb-cluster:db-router
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>keystone-mysql-router:shared-db<span class="w"> </span>keystone:shared-db
+</span></code></pre></div>
+<p>Adicionando relações:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>keystone:identity-service<span class="w"> </span>neutron-api:identity-service
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>keystone:certificates<span class="w"> </span>vault:certificates
+</span></code></pre></div>
+<h3 id="9-rabbitmq">9 - RabbitMQ</h3>
+<p>O aplicativo rabbitmq-server é conteinerizado na máquina 2 com o charm rabbitmq-server, adicionando em seguida duas relações.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>--channel<span class="w"> </span><span class="m">3</span>.9/stable<span class="w"> </span>rabbitmq-server
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>rabbitmq-server:amqp<span class="w"> </span>neutron-api:amqp
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>rabbitmq-server:amqp<span class="w"> </span>nova-compute:amqp
+</span></code></pre></div>
+<h3 id="10-nova-cloud-controller">10 - Nova Cloud Controller</h3>
+<p>Esse aplicativo é conteinerizado na máquina 2 com o charm nova-cloud-controller. É feito o arquivo <strong>ncc.yaml</strong>, que contém as configurações, e depois é feito o deploy da aplicação:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>--config<span class="w"> </span>ncc.yaml<span class="w"> </span>nova-cloud-controller
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>--config<span class="w"> </span>ncc.yaml<span class="w"> </span>nova-cloud-controller
+</span></code></pre></div>
+</details>
+<p>Conectando o Nova Cloud Controller ao banco de dados na nuvem:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-router<span class="w"> </span>ncc-mysql-router
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ncc-mysql-router:db-router<span class="w"> </span>mysql-innodb-cluster:db-router
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ncc-mysql-router:shared-db<span class="w"> </span>nova-cloud-controller:shared-db
+</span></code></pre></div>
+<p>Adicionando relações:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>nova-cloud-controller:identity-service<span class="w"> </span>keystone:identity-service
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>nova-cloud-controller:amqp<span class="w"> </span>rabbitmq-server:amqp
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>nova-cloud-controller:neutron-api<span class="w"> </span>neutron-api:neutron-api
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>juju<span class="w"> </span>integrate<span class="w"> </span>nova-cloud-controller:cloud-compute<span class="w"> </span>nova-compute:cloud-compute
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>juju<span class="w"> </span>integrate<span class="w"> </span>nova-cloud-controller:certificates<span class="w"> </span>vault:certificates
+</span></code></pre></div>
+<h3 id="11-placement">11 - Placement</h3>
+<p>A aplicação Placement é conteinerizada na máquina 2 com o charm placement.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:1<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>placement
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>placement
+</span></code></pre></div>
+</details>
+<p>Conectando o Placement ao banco de dados na nuvem:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-router<span class="w"> </span>placement-mysql-router
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>placement-mysql-router:db-router<span class="w"> </span>mysql-innodb-cluster:db-router
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>placement-mysql-router:shared-db<span class="w"> </span>placement:shared-db
+</span></code></pre></div>
+<p>Adicionando relações:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>placement:identity-service<span class="w"> </span>keystone:identity-service
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>placement:placement<span class="w"> </span>nova-cloud-controller:placement
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>placement:certificates<span class="w"> </span>vault:certificates
+</span></code></pre></div>
+<h3 id="12-horizon-openstack-dashboard">12 - Horizon - OpenStack Dashboard</h3>
+<p>O Horizon é conteinerizado na máquina 2 com o charm openstack-dashboard.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>openstack-dashboard
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>openstack-dashboard
+</span></code></pre></div>
+</details>
+<p>Conectando o Horizon ao banco de dados na nuvem:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-router<span class="w"> </span>dashboard-mysql-router
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>dashboard-mysql-router:db-router<span class="w"> </span>mysql-innodb-cluster:db-router
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>dashboard-mysql-router:shared-db<span class="w"> </span>openstack-dashboard:shared-db
+</span></code></pre></div>
+<p>Adicionando relações:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>openstack-dashboard:identity-service<span class="w"> </span>keystone:identity-service
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>openstack-dashboard:certificates<span class="w"> </span>vault:certificates
+</span></code></pre></div>
+<h3 id="13-glance">13 - Glance</h3>
+<p>A aplicação Glance é conteinerizada na máquina 2 com o charm glance.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>glance
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:2<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>glance
+</span></code></pre></div>
+</details>
+<p>Conectando o Glance ao banco de dados na nuvem:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-router<span class="w"> </span>glance-mysql-router
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>glance-mysql-router:db-router<span class="w"> </span>mysql-innodb-cluster:db-router
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>glance-mysql-router:shared-db<span class="w"> </span>glance:shared-db
+</span></code></pre></div>
+<p>Adicionando relações:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>glance:image-service<span class="w"> </span>nova-cloud-controller:image-service
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>glance:image-service<span class="w"> </span>nova-compute:image-service
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>glance:identity-service<span class="w"> </span>keystone:identity-service
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>juju<span class="w"> </span>integrate<span class="w"> </span>glance:certificates<span class="w"> </span>vault:certificates
+</span></code></pre></div>
+<h3 id="14-ceph-monitor">14 - Ceph Monitor</h3>
+<p>O Ceph Monitor é conteinerizado nas máquinas 0, 1 e 2 com o charm ceph-mon. Primeiro é feito o arquivo <strong>ceph-mon.yaml</strong>, que contém as configurações, e depois é feito o deploy da aplicação:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--to<span class="w"> </span>lxd:0,lxd:1,lxd:2<span class="w"> </span>--channel<span class="w"> </span>reef/stable<span class="w"> </span>--config<span class="w"> </span>ceph-mon.yaml<span class="w"> </span>ceph-mon
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>-n<span class="w"> </span><span class="m">3</span><span class="w"> </span>--to<span class="w"> </span>lxd:0,lxd:1,lxd:2<span class="w"> </span>--channel<span class="w"> </span>quincy/stable<span class="w"> </span>--config<span class="w"> </span>ceph-mon.yaml<span class="w"> </span>ceph-mon
+</span></code></pre></div>
+</details>
+<p>Adicionando relações:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ceph-mon:osd<span class="w"> </span>ceph-osd:mon
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ceph-mon:client<span class="w"> </span>nova-compute:ceph
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ceph-mon:client<span class="w"> </span>glance:ceph
+</span></code></pre></div>
+<h3 id="15-cinder">15 - Cinder</h3>
+<p>O Cinder é conteinerizado na máquina 1 com o charm cinder. É criado o arquivo de configuração <strong>cinder.yaml</strong>, e depois é feito o deploy da aplicação:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:1<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>--config<span class="w"> </span>cinder.yaml<span class="w"> </span>cinder
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:1<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>--config<span class="w"> </span>cinder.yaml<span class="w"> </span>cinder
+</span></code></pre></div>
+</details>
+<p>Conectando o Cinder ao banco de dados na nuvem:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">8</span>.0/stable<span class="w"> </span>mysql-router<span class="w"> </span>cinder-mysql-router
+</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder-mysql-router:db-router<span class="w"> </span>mysql-innodb-cluster:db-router
+</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder-mysql-router:shared-db<span class="w"> </span>cinder:shared-db
+</span></code></pre></div>
+<p>Adicionando relações:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder:cinder-volume-service<span class="w"> </span>nova-cloud-controller:cinder-volume-service
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder:identity-service<span class="w"> </span>keystone:identity-service
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder:amqp<span class="w"> </span>rabbitmq-server:amqp
+</span><span id="__span-48-4"><a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder:image-service<span class="w"> </span>glance:image-service
+</span><span id="__span-48-5"><a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder:certificates<span class="w"> </span>vault:certificates
+</span></code></pre></div>
+<p>A relação glance:image-service permite que o Cinder consuma a API do Glance e, como o Glance, o Cinder usa o ceph como backend de armazenamento, implementado com o comando subordinado a seguir:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span><span class="m">2023</span>.2/stable<span class="w"> </span>cinder-ceph
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--channel<span class="w"> </span>yoga/stable<span class="w"> </span>cinder-ceph
+</span></code></pre></div>
+</details>
+<p>Adicionando relações:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder-ceph:storage-backend<span class="w"> </span>cinder:storage-backend
+</span><span id="__span-51-2"><a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder-ceph:ceph<span class="w"> </span>ceph-mon:client
+</span><span id="__span-51-3"><a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>juju<span class="w"> </span>integrate<span class="w"> </span>cinder-ceph:ceph-access<span class="w"> </span>nova-compute:ceph-access
+</span></code></pre></div>
+<h3 id="16-ceph-rados-gateway">16 - Ceph RADOS Gateway</h3>
+<p>O Ceph RADOS Gateway, implantado para oferecer um gateway HTTP compatível com S3 e Swift, é conteinerizado na máquina 0 com o charm ceph-radosgw.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:0<span class="w"> </span>--channel<span class="w"> </span>reef/stable<span class="w"> </span>ceph-radosgw
+</span></code></pre></div>
+<details>
+<summary>Nova Versão</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>juju<span class="w"> </span>deploy<span class="w"> </span>--to<span class="w"> </span>lxd:0<span class="w"> </span>--channel<span class="w"> </span>quincy/stable<span class="w"> </span>ceph-radosgw
+</span></code></pre></div>
+</details>
+<p>Adicionando relação:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>juju<span class="w"> </span>integrate<span class="w"> </span>ceph-radosgw:mon<span class="w"> </span>ceph-mon:radosgw
+</span></code></pre></div>
+<h3 id="17-ceph-osd-integration">17 - Ceph-OSD Integration</h3>
+<p>Com todos os comandos anteriores corretamente realizados, é preciso executar a configuração do charm ceph-osd para usar o dispositivo de bloco <code>/dev/sdb</code> como armazenamento para os OSDs do Ceph.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>juju<span class="w"> </span>config<span class="w"> </span>ceph-osd<span class="w"> </span>osd-devices<span class="o">=</span><span class="s1">&#39;/dev/sdb&#39;</span>
+</span></code></pre></div>
+<h2 id="configurando-o-openstack">Configurando o Openstack</h2>
+<ul>
+<li>Documentação da referência oficial: <a href="https://docs.openstack.org/project-deploy-guide/charm-deployment-guide/latest/configure-openstack.html" target="_blank">https://docs.openstack.org/project-deploy-guide/charm-deployment-guide/latest/configure-openstack.html</a></li>
+</ul>
+<p>Serão configurados os serviços que controlam as VMs (Nova), os volumes de disco (Cinder), e a estrutura de rede virtual (Neutron). E para isso, serão seguidos os seguintes passos:</p>
+<h3 id="passo-1-autenticacao">Passo 1: Autenticação</h3>
+<p>Criando o arquivo <code>openrc</code> com as credenciais de acesso ao OpenStack.</p>
+<ul>
+<li>
+<p>Obtendo o endereço IP:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>juju<span class="w"> </span>status<span class="w"> </span>--format<span class="o">=</span>yaml<span class="w"> </span>openstack-dashboard<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>public-address<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-1
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Obtendo a senha:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>juju<span class="w"> </span>run<span class="w"> </span>keystone/0<span class="w"> </span>get-admin-password
+</span></code></pre></div></p>
+</li>
+</ul>
+<h3 id="passo-2-horizon">Passo 2: Horizon</h3>
+<p>Acessando o dashboard Horizon como administrador e mantendo ele aberto durante todo o setup do openstack para visualizar as mudanças que estão sendo feitas.</p>
+<ul>
+<li>Horizon_URL: https://#IP_obtido#/horizon</li>
+<li>User_Name: admin</li>
+<li>Password: #Senha_obtida#</li>
+<li>Domain_Name: admin_domain</li>
+</ul>
+<details class="tarefa-1">
+<summary>Tarefa-1</summary>
+<p>De um print das Telas abaixo:</p>
+<div class="language-text highlight"><pre><span></span><code>1. Do Status do JUJU
+2. Do Dashboard do MAAS com as máquinas.
+3. Da aba compute overview no OpenStack Dashboard.
+4. Da aba compute instances no OpenStack Dashboard.
+5. Da aba network topology no OpenStack Dashboard.
+</code></pre></div>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-000.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Juju status" src="../imgs/roteiro3-000.png" /></a></p>
+<figcaption>
+<p>Figura 2 - Comando “juju status” no terminal.</p>
+</figcaption>
+</figure>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-001.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Dashboard do MAAS" src="../imgs/roteiro3-001.png" /></a></p>
+<figcaption>
+<p>Figura 3 - Dashboard do MAAS com as máquinas.</p>
+</figcaption>
+</figure>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-002.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Openstack overview" src="../imgs/roteiro3-002.png" /></a></p>
+<figcaption>
+<p>Figura 4 - Aba Compute Overview no OpenStack.</p>
+</figcaption>
+</figure>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-003.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Openstack instances" src="../imgs/roteiro3-003.png" /></a></p>
+<figcaption>
+<p>Figura 5 - Aba Compute Instances no OpenStack.</p>
+</figcaption>
+</figure>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-004.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Openstack network topology" src="../imgs/roteiro3-004.png" /></a></p>
+<figcaption>
+<p>Figura 6 - Aba Network Topoplogy no OpenStack.</p>
+</figcaption>
+</figure>
+</details>
+<h3 id="passo-3-imagens">Passo 3: Imagens</h3>
+<ul>
+<li>
+<p>Instalando o cliente do Openstack no main via snap:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>openstackclients
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Carregando as credenciais em openrc:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="nb">source</span><span class="w"> </span>~/openstack-bundles/stable/openstack-base/openrc
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Verificando os serviços disponíveis no Openstack:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>openstack<span class="w"> </span>service<span class="w"> </span>list
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Fazendo ajustes na rede:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>juju<span class="w"> </span>config<span class="w"> </span>neutron-api<span class="w"> </span>enable-ml2-dns<span class="o">=</span><span class="s2">&quot;true&quot;</span>
+</span><span id="__span-61-2"><a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>juju<span class="w"> </span>config<span class="w"> </span>neutron-api-plugin-ovn<span class="w"> </span>dns-servers<span class="o">=</span><span class="s2">&quot;172.20.129.131&quot;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Procurando e importando a imagem do Ubuntu Jammy para o Glance:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>curl http://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-
+</span><span id="__span-62-2"><a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>amd64.img \
+</span><span id="__span-62-3"><a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>    --output ~/cloud-images/jammy-amd64.img
+</span><span id="__span-62-4"><a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>
+</span><span id="__span-62-5"><a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a>openstack image create --public --container-format bare \
+</span><span id="__span-62-6"><a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a>    --disk-format qcow2 --file ~/cloud-images/jammy-amd64.img \
+</span><span id="__span-62-7"><a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a>    jammy-amd64
+</span></code></pre></div></p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Não esquecer!</p>
+<p>Fazer o clone do repositório <code>openstack-bundles</code> caso ainda não tenha feito.
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/openstack-charmers/openstack-bundles
+</span></code></pre></div></p>
+</div>
+<h3 id="passo-4-rede-externa">Passo 4: Rede Externa</h3>
+<p>Configurando uma rede externa para conectar as VMs à rede física, usando uma faixa de alocação entre 172.16.7.0 e 172.16.8.255:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>source ~/openstack-bundles/stable/openstack-base/openrc
+</span><span id="__span-64-2"><a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>
+</span><span id="__span-64-3"><a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>openstack network create --external \
+</span><span id="__span-64-4"><a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a>    --provider-network-type flat --provider-physical-network physnet1 \
+</span><span id="__span-64-5"><a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a>    ext_net
+</span><span id="__span-64-6"><a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a>
+</span><span id="__span-64-7"><a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a>openstack subnet create --network ext_net --no-dhcp \
+</span><span id="__span-64-8"><a id="__codelineno-64-8" name="__codelineno-64-8" href="#__codelineno-64-8"></a>    --gateway 172.16.0.1 --subnet-range 172.16.0.0/20 \
+</span><span id="__span-64-9"><a id="__codelineno-64-9" name="__codelineno-64-9" href="#__codelineno-64-9"></a>    --allocation-pool start=172.16.7.0,end=172.16.8.255 \
+</span><span id="__span-64-10"><a id="__codelineno-64-10" name="__codelineno-64-10" href="#__codelineno-64-10"></a>    ext_subnet
+</span></code></pre></div>
+<h3 id="passo-5-rede-interna-e-roteador">Passo 5: Rede Interna e Roteador</h3>
+<p>Configurando uma rede interna para conectar as VMs à rede externa, usando a subnet 192.169.0.0/24 e sem DNS:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>openstack network create int_net
+</span><span id="__span-65-2"><a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>
+</span><span id="__span-65-3"><a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>openstack subnet create --network int_net \
+</span><span id="__span-65-4"><a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a>   --gateway 192.169.0.1 --subnet-range 192.169.0.0/24 \
+</span><span id="__span-65-5"><a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a>   --allocation-pool start=192.169.0.10,end=192.169.0.200 \
+</span><span id="__span-65-6"><a id="__codelineno-65-6" name="__codelineno-65-6" href="#__codelineno-65-6"></a>   int_subnet
+</span></code></pre></div>
+<p>Configurando o roteador:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>openstack router create provider-router
+</span><span id="__span-66-2"><a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>openstack router set --external-gateway ext_net provider-router
+</span><span id="__span-66-3"><a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>openstack router add subnet provider-router int_subnet
+</span></code></pre></div>
+<h3 id="passo-6-flavors">Passo 6: Flavors</h3>
+<ul>
+<li>Criando os flavors (instance type) - <strong>SEM ephemeral disk</strong> para as VMs:</li>
+</ul>
+<figure>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Flavor Name</th>
+<th style="text-align: center;">vCPUs</th>
+<th style="text-align: center;">RAM (GB)</th>
+<th style="text-align: center;">Disk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>m1.tiny</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>m1.small</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>m1.medium</code></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">20</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>m1.large</code></td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">20</td>
+</tr>
+</tbody>
+</table>
+<figcaption>
+<p>Tabela 1 - Flavors criados e suas respectivas configurações. </p>
+</figcaption>
+</figure>
+<p>Comandos:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>openstack<span class="w"> </span>flavor<span class="w"> </span>create<span class="w"> </span>--ram<span class="w"> </span><span class="m">1000</span><span class="w"> </span>--vcpus<span class="w"> </span><span class="m">1</span><span class="w"> </span>--disk<span class="w"> </span><span class="m">20</span><span class="w"> </span>m1.tiny
+</span><span id="__span-67-2"><a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>openstack<span class="w"> </span>flavor<span class="w"> </span>create<span class="w"> </span>--ram<span class="w"> </span><span class="m">2000</span><span class="w"> </span>--vcpus<span class="w"> </span><span class="m">1</span><span class="w"> </span>--disk<span class="w"> </span><span class="m">20</span><span class="w"> </span>m1.small
+</span><span id="__span-67-3"><a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>openstack<span class="w"> </span>flavor<span class="w"> </span>create<span class="w"> </span>--ram<span class="w"> </span><span class="m">4000</span><span class="w"> </span>--vcpus<span class="w"> </span><span class="m">2</span><span class="w"> </span>--disk<span class="w"> </span><span class="m">20</span><span class="w"> </span>m1.medium
+</span><span id="__span-67-4"><a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>openstack<span class="w"> </span>flavor<span class="w"> </span>create<span class="w"> </span>--ram<span class="w"> </span><span class="m">8000</span><span class="w"> </span>--vcpus<span class="w"> </span><span class="m">4</span><span class="w"> </span>--disk<span class="w"> </span><span class="m">20</span><span class="w"> </span>m1.large
+</span></code></pre></div></p>
+<h3 id="passo-7-conexao">Passo 7: Conexão</h3>
+<p>O key-pair da máquina onde está o MaaS já existe e é importado:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>openstack<span class="w"> </span>keypair<span class="w"> </span>create<span class="w"> </span>--public-key<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span>open_key
+</span></code></pre></div>
+<ul>
+<li>Via o dashboard Horizon, como administrador, adicionando a liberação do SSH e ALL ICMP no security group default:</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>for i in $(openstack security group list | awk &#39;/default/{ print $2 }&#39;); do
+</span><span id="__span-69-2"><a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>   openstack security group rule create $i --protocol icmp --remote-ip 
+</span><span id="__span-69-3"><a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a>0.0.0.0/0;    
+</span><span id="__span-69-4"><a id="__codelineno-69-4" name="__codelineno-69-4" href="#__codelineno-69-4"></a>   openstack security group rule create $i --protocol tcp --remote-ip 
+</span><span id="__span-69-5"><a id="__codelineno-69-5" name="__codelineno-69-5" href="#__codelineno-69-5"></a>0.0.0.0/0 --dst-port 22; 
+</span><span id="__span-69-6"><a id="__codelineno-69-6" name="__codelineno-69-6" href="#__codelineno-69-6"></a>done
+</span></code></pre></div>
+<h3 id="passo-8-instancia">Passo 8: Instância</h3>
+<ul>
+<li>
+<p>Disparando uma instância m1.tiny com o nome client e sem Novo Volume:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>openstack server create --image jammy-amd64 --flavor m1.tiny \
+</span><span id="__span-70-2"><a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>   --key-name open_key --network int_net \
+</span><span id="__span-70-3"><a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>   client
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Alocando um floating IP para a instância:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>FLOATING_IP=$(openstack floating ip create -f value -c floating_ip_address ext_net)
+</span><span id="__span-71-2"><a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>
+</span><span id="__span-71-3"><a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a>openstack server add floating ip client $FLOATING_IP
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Testando a conexão SSH:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>ssh ubuntu@$FLOATING_IP
+</span></code></pre></div></p>
+</li>
+</ul>
+<details class="tarefa-2">
+<summary>Tarefa-2</summary>
+<p>De um print das Telas abaixo:</p>
+<div class="language-text highlight"><pre><span></span><code>1. Do Dashboard do MAAS com as máquinas.
+2. Da aba compute overview no OpenStack.
+3. Da aba compute instances no OpenStack.
+4. Da aba network topology no OpenStack.
+</code></pre></div>
+<p>Enumere as diferencas encontradas entre os prints das telas na Tarefa 1 e na Tarefa 2.</p>
+<p>Explique como cada recurso foi criado.</p>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-005.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Juju status" src="../imgs/roteiro3-005.png" /></a></p>
+<figcaption>
+<p>Figura 7 - Dashboard do MAAS com as máquinas.</p>
+</figcaption>
+</figure>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-006.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Dashboard do MAAS" src="../imgs/roteiro3-006.png" /></a></p>
+<figcaption>
+<p>Figura 8 - Aba Compute Overview no OpenStack.</p>
+</figcaption>
+</figure>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-007.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Openstack overview" src="../imgs/roteiro3-007.png" /></a></p>
+<figcaption>
+<p>Figura 9 - Aba Compute Instances no OpenStack.</p>
+</figcaption>
+</figure>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-008.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Openstack instances" src="../imgs/roteiro3-008.png" /></a></p>
+<figcaption>
+<p>Figura 10 - Aba Network Topoplogy no OpenStack.</p>
+</figcaption>
+</figure>
+<p><strong>Enumere as diferencas encontradas entre os prints das telas na Tarefa 1 e na Tarefa 2.</strong></p>
+<ul>
+<li>Compute overview: percebe-se que o número de Instâncias, VCPUs, Floating IPs, security groups e Routers atualizou para 1, pois eles foram criados. Além disso, a memória RAM agora está em 1GB, temos 6 rules dos security groups e a networks e a port atualizaram os valores, pois agora estamos utilizando instâncias; </li>
+<li>Compute instances: criada a instância “cliente”; </li>
+<li>Network topology: tem network, uma vez que foi criada a subnet e o roteador.</li>
+</ul>
+<p><strong>Explique como cada recurso foi criado.</strong></p>
+<p>Após importar as chaves de validação e imagem, e configurado a rede externa: </p>
+<ul>
+<li>
+<p>Rede interna e roteador: usar uma série de comandos para criar rede interna, subrede e roteador, colocando os devidos valores.
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-73-1"><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>openstack<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>int_net<span class="w"> </span>
+</span><span id="__span-73-2"><a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>openstack<span class="w"> </span>subnet<span class="w"> </span>create<span class="w"> </span>--network<span class="w"> </span>int_net<span class="w"> </span>--gateway<span class="w"> </span><span class="m">192</span>.168.0.1<span class="w"> </span>--subnet-range<span class="w"> </span><span class="m">192</span>.168.0.0/24<span class="w"> </span>--allocation-pool<span class="w"> </span><span class="nv">start</span><span class="o">=</span><span class="m">192</span>.168.0.10,end<span class="o">=</span><span class="m">192</span>.168.0.200<span class="w"> </span>int_subnet<span class="w"> </span>
+</span><span id="__span-73-3"><a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>openstack<span class="w"> </span>router<span class="w"> </span>create<span class="w"> </span>provider-router<span class="w"> </span>
+</span><span id="__span-73-4"><a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a>openstack<span class="w"> </span>router<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--external-gateway<span class="w"> </span>ext_net<span class="w"> </span>provider-router<span class="w"> </span>
+</span><span id="__span-73-5"><a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a>openstack<span class="w"> </span>router<span class="w"> </span>add<span class="w"> </span>subnet<span class="w"> </span>provider-router<span class="w"> </span>int_subnet
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Security Groups Rules: usar um comando 
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-74-1"><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>openstack<span class="w"> </span>security<span class="w"> </span>group<span class="w"> </span>rule<span class="w"> </span>create
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Instância: usar o comando a seguir passando a devida imagem, chave de validação e rede. 
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-75-1"><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>openstack<span class="w"> </span>server<span class="w"> </span>create<span class="w"> </span>--image<span class="w"> </span>jammy-amd64<span class="w"> </span>--flavor<span class="w"> </span>m1.small<span class="w"> </span>--key-name<span class="w"> </span>mykey<span class="w"> </span>--network<span class="w"> </span>int_net<span class="w"> </span>client
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Endereço de IP Flutuante: comandos abaixo, passando o nome do servidor criado anteriormente.<br />
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-76-1"><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="nv">FLOATING_IP</span><span class="o">=</span><span class="k">$(</span>openstack<span class="w"> </span>floating<span class="w"> </span>ip<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>value<span class="w"> </span>-c<span class="w"> </span>floating_ip_address<span class="w"> </span>ext_net<span class="k">)</span><span class="w"> </span>openstack<span class="w"> </span>server<span class="w"> </span>add<span class="w"> </span>floating<span class="w"> </span>ip<span class="w"> </span>client<span class="w"> </span><span class="nv">$FLOATING_IP</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+</details>
+<h3 id="escalando-os-nos">Escalando os nós</h3>
+<p>No OpenStack, escalar os nós de configuração é essencial para melhorar diversos aspectos dos serviços em um ambiente de nuvem. </p>
+<p>Alguns benefícios da escala dos nós de configuração:</p>
+<ul>
+<li>Aumento de capacidade de processamento;</li>
+<li>Alta disponibilidade e tolerância a falhas;</li>
+<li>Melhoria de desempenho e latência reduzida;</li>
+<li>Escalabilidade horizontal.</li>
+</ul>
+<details class="info">
+<summary>Info</summary>
+<p>Para mais detalhes sobre o escalonamento de nós no OpenStack, visitar o site da disciplina: <a href="https://insper.github.io/computacao-nuvem/roteiros/3.setup/#escalando-os-nos" target="_blank">escalonando os nós</a></p>
+</details>
+<p>Adicionando o nó reserva ao openstack no cluster como nó de computing e block storage.</p>
+<ul>
+<li>
+<p>Fazer o release da máquina que está ALLOCATED no Dashboard do MaaS.</p>
+</li>
+<li>
+<p>Instalando o hypervisor, realizando o deploy na máquina:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-77-1"><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>juju<span class="w"> </span>add-unit<span class="w"> </span>nova-compute
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Ao anotar o número da máquina adicionada no status, é instalado o block storage:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-78-1"><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>juju<span class="w"> </span>add-unit<span class="w"> </span>--to<span class="w"> </span>&lt;machine-id&gt;<span class="w"> </span>ceph-osd
+</span></code></pre></div></p>
+</li>
+</ul>
+<details class="tarefa-3">
+<summary>Tarefa-3</summary>
+<p>Faça um desenho de como é a sua arquitetura de rede, desde a sua conexão com o Insper até a instância alocada.</p>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-009.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Desenho da arquitetura" src="../imgs/roteiro3-009.png" /></a></p>
+<figcaption>
+<p>Figura 11 - Desenho da arquitetura de rede, da conexão com o Insper até a instância alocada.</p>
+</figcaption>
+</figure>
+</details>
+<h2 id="app-uso-da-infraestrutura">App - Uso da infraestrutura</h2>
+<p>Levantar 4 instâncias em máquinas virtuais do OpenStack: 2 instâncias com a API do projeto, 1 instância com banco de dados e 1 instância com LoadBalancer (Nginx). Configurando-as como indicado a seguir:</p>
+<figure>
+<p><a class="glightbox" href="../imgs/roteiro3-topologia.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Topologia" src="../imgs/roteiro3-topologia.png" /></a></p>
+<figcaption>
+<p>Figura 12 - Topologia a ser configurada. Fonte: instruções da disciplina.</p>
+</figcaption>
+</figure>
+<details class="tarefa-4" open="open">
+<summary>Tarefa-4</summary>
+<ol>
+<li>Escreva um relatório dos passos utilizados. </li>
+<li>Anexe fotos e/ou diagramas contendo: arquitetura de rede da sua infraestrutura dentro do Dashboard do Openstack.</li>
+<li>Lista de VMs utilizadas com nome e IPs alocados </li>
+<li>Print do Dashboard do Wordpress conectado via máquina Nginx/LB. </li>
+<li>4 Prints, cada um demonstrando em qual server  (máquina física) cada instancia foi alocado pelo OpenStack.</li>
+</ol>
+<p><strong>O relatório está presente na aba <a href="../relatorio/">Relatório - Tarefa 4.</a></strong></p>
+</details>
+<h2 id="conclusao">Conclusão</h2>
+<p>Este roteiro apresentou, de forma prática e detalhada, o processo de implantação de uma nuvem privada utilizando o OpenStack em conjunto com ferramentas como MAAS, Juju e charms específicos. </p>
+<p>Foram abordadas todas as etapas necessárias para configurar a infraestrutura, desde a criação do controller até a implantação dos principais serviços OpenStack — incluindo redes (Neutron com SDN/OVN), armazenamento (Ceph e Cinder), autenticação (Keystone), dashboard (Horizon), imagens (Glance), computação (Nova) e banco de dados (MySQL). Além disso, destacou-se a importância do Vault na gestão de certificados e segurança. </p>
+<p>Ao longo do roteiro, também foram apresentadas atualizações dos comandos usados, refletindo versões mais recentes dos componentes. O conteúdo permite não apenas a compreensão dos conceitos fundamentais de nuvem privada, mas também oferece uma visão aplicada sobre redes virtuais baseadas em SDN.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.path", "navigation.tracking", "navigation.expand", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../assets/javascripts/badge.js" async></script>
+      
+        <script src="../../../termynal.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
