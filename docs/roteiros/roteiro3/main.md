@@ -76,7 +76,7 @@ juju deploy -n 3 --channel reef/stable --config ceph-osd.yaml --constraints tags
 
 ### 4 - Nova Compute
 
-O nova-compute, responsável por provisionar instâncias de computação no OpenStack, deve ser implantado nos nós de computação usando os IDs das máquinas (0, 1 e 2), pois não há mais nós MAAS disponíveis. Isso implica em compartilhar os mesmos nós entre múltiplos serviços. É feito o arquivo de configuração **nova-compute.yaml**, e para o deploy:
+O nova-compute, responsável por provisionar instâncias de computação no OpenStack, deve ser implantado nos nós de computação usando os IDs das máquinas (1 e 2), pois não há mais nós MAAS disponíveis. Isso implica em compartilhar os mesmos nós entre múltiplos serviços. É feito o arquivo de configuração **nova-compute.yaml**, e para o deploy:
 
 ``` sh
 juju deploy -n 2 --to 1,2 --channel 2023.2/stable --config nova-compute.yaml nova-compute
@@ -97,7 +97,7 @@ juju deploy -n 3 --to lxd:0,lxd:1,lxd:2 --channel 8.0/stable mysql-innodb-cluste
 
 ### 6 - Vault
 
-O Vault gerencia os certificados TLS que permitem a comunicação criptografada entre aplicativos em nuvem, e ele é conteinerizado na máquina 2:
+O Vault gerencia os certificados TLS que permitem a comunicação criptografada entre aplicativos em nuvem, sendo conteinerizado:
 
 ``` sh
 juju deploy --to lxd:0 --channel 1.8/stable vault
@@ -110,7 +110,7 @@ juju deploy --to lxd:0 --channel 1.8/stable vault
 
 Os passos seguintes são de acordo com as intruções abaixo, com os seus respectivos comandos:
 
-- criar instância específica do mysql-router com o charme subordinado mysql-router;
+- criar instância específica do mysql-router com o charm subordinado mysql-router;
 - adicionar relação entre instância mysql-router e o banco de dados;
 - adicionar relação entre instância mysql-router e o aplicativo.
 
@@ -124,10 +124,10 @@ Para o Vault ser inicializado, desbloqueado e autorizado, são executados os com
 
 - Instalando o cli do Vault;
 - Configurando o cli;
-- Gerando-os;
+- Gerando keys;
 - Remover o selo de 3 teclas (usar esse comando 3 vezes);
 - Confirgurando o token;
-- Gerando um token (tempo dos próximos passos de 10 minutos);
+- Gerando um token (tempo dos próximos passos: 10 minutos);
 - Autorizando.
 
 ``` sh
@@ -141,7 +141,7 @@ juju run vault/0 authorize-charm token=<Token generated in the last command>
 ```
 
 ??? "Nova Versão"
-    ``` sh
+    ```
     juju run vault/leader authorize-charm token=<Token generated in the last command>
     ```
 
@@ -278,7 +278,7 @@ juju integrate nova-cloud-controller:certificates vault:certificates
 
 ### 11 - Placement
 
-A aplicação Placement é conteinerizada na máquina 2 com o charm placement.
+A aplicação Placement é conteinerizado com o charm placement.
 
 ``` sh
 juju deploy --to lxd:1 --channel 2023.2/stable placement
@@ -466,7 +466,9 @@ juju config ceph-osd osd-devices='/dev/sdb'
 
 - Documentação da referência oficial: [https://docs.openstack.org/project-deploy-guide/charm-deployment-guide/latest/configure-openstack.html](https://docs.openstack.org/project-deploy-guide/charm-deployment-guide/latest/configure-openstack.html){:target=_blank}
 
-Serão configurados os serviços que controlam as VMs (Nova), os volumes de disco (Cinder), e a estrutura de rede virtual (Neutron). E para isso, serão seguidos os seguintes passos:
+Serão configurados o serviço que controla as VMs (Nova), os volumes de disco (Cinder), e a estrutura de rede virtual (Neutron). É feita uma autenticação (Keystone) no sistema, é montado o servidor de imagens (Glance), que utiliza o Object Storage (Ceph) para armazenamento, e conta com um dashboard (Horizon), um cluster de banco de dados (Mysql Inno Cluster) e um servidor de filas (RabbitMQ) como apoio.
+
+E para isso, serão seguidos os seguintes passos:
 
 ### Passo 1: Autenticação
 
@@ -629,7 +631,7 @@ openstack flavor create --ram 8000 --vcpus 4 --disk 20 m1.large
 
 ### Passo 7: Conexão
 
-O key-pair da máquina onde está o MaaS já existe e é importado:
+O key-pair já existe e é importado:
 
 ``` sh
 openstack keypair create --public-key ~/.ssh/id_rsa.pub open_key
