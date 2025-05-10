@@ -135,6 +135,7 @@ nav:
       - Relatório - Tarefa 4: roteiros/roteiro3/relatorio.md
     - Roteiro 4: 
       - Roteiro: roteiros/roteiro4/main.md
+      - Disaster Recovery e SLA: roteiros/roteiro4/questoes.md
   - Projeto: 
     - Enunciado: ./projeto/enunciado.md
     - Documentação: ./projeto/documentacao.md
