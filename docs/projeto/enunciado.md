@@ -1,10 +1,4 @@
-!!! info inline end
-
-    PROJETO: **DUPLA**
-
-    DEADLINE: **28.mai.2025**
-
-!!! warning "Enunciado original"
+!!! info "Enunciado original"
 
     O enunciado completo do projeto se encontra na página da disciplina no link: [https://insper.github.io/computacao-nuvem/projetos_2025-1/projeto/](https://insper.github.io/computacao-nuvem/projetos_2025-1/projeto/){:target="_blank"}
 
@@ -85,6 +79,19 @@ O docker compose deve conter pelo menos 2 serviços: a aplicação e o banco de 
 
 A aplicação deve ser autocontida, ou seja, deve ser possível executar a aplicação apenas com o comando `docker compose up` - pois isso é parte essencial da entrega.
 
+Para organização:
+
+``` tree title="estrutura de diretório sugerida"
+api/
+  Dockerfile
+  app/
+    app.py
+  requirements.txt
+  ...
+compose.yaml
+.env
+```
+
 ### Publicação no Docker Hub
 
 Após a dockerização, o projeto deve ser publicado no Docker Hub. O link do Docker Hub deve ser incluído na documentação do projeto.
@@ -107,9 +114,9 @@ A publicação no docker hub deve ser feita via linha de comando. E os comandos 
                 - 5432:5432 #(2)!
     ```
 
-    1.  Caso a variável de ambiente `POSTGRES_DB` não exista ou seja nula - não seja definida no arquivo `.env` - o valor padrão será `projeto`. Vide [documentação](https://docs.docker.com/reference/compose-file/interpolation/){target='_blank'}.
+    - Caso a variável de ambiente `POSTGRES_DB` não exista ou seja nula - não seja definida no arquivo `.env` - o valor padrão será `projeto`. Vide [documentação](https://docs.docker.com/reference/compose-file/interpolation/){target='_blank'}.
 
-    2. Aqui é feito um túnel da porta 5432 do container do banco de dados para a porta 5432 do host (no caso localhost). Em um ambiente de produção, essa porta não deve ser exposta, pois ninguém de fora do compose deveria acessar o banco de dados diretamente.
+    - Aqui é feito um túnel da porta 5432 do container do banco de dados para a porta 5432 do host (no caso localhost). Em um ambiente de produção, essa porta não deve ser exposta, pois ninguém de fora do compose deveria acessar o banco de dados diretamente.
 
     ``` { .env title=".env" }
     POSTGRES_DB=meuprojeto
@@ -122,16 +129,31 @@ A publicação no docker hub deve ser feita via linha de comando. E os comandos 
 
 ## Etapa 2
 
-### AWS
+### AWS Lightsail
 
-O próximo passo é implantar a aplicação na AWS.
+Após a conclusão da etapa 1 do projeto com a aplicação containerizada localmente utilizando Docker Compose.
+
+Antes de iniciar, certifique-se de ter:
+
+- Conta ativa na AWS com acesso ao Lightsail;
+- Docker instalado e configurado;
+- Código da aplicação FastAPI pronto e funcional localmente.
+
+Os próximos passos são:
+
+- Implantar a aplicação utilizando o AWS Lightsail Container Service;
+- Configurar um banco de dados gerenciado no Lightsail;
+- Conectar sua aplicação ao banco de dados;
+- Gerenciar e monitorar o custo do serviço em produção.
+
+??? info "Dicas"
+
+    Para mais informações sobre o Lightsail visualizar o conteúdo adicional na página [lightsail](https://insper.github.io/computacao-nuvem/adicional/AWSLightsail/){:target:"_blank"} e para algumas dicas de configuração ver [dicas](https://insper.github.io/computacao-nuvem/projetos_2025-1/projeto/#na-aba-conteudo-adicional-do-site-da-disciplina-temos-explicacoes-sobre-o-ligthsail-utilizem-como-referencia){:target="_blank"}.
 
 ## Entregas
 
 ??? success "Entrega Etapa 1"
-    A entrega deverá ser um link do projeto no GitHub, contendo o código da API e o Dockerfile.
-
-    Deve haver uma documentação básica do projeto no MkDocs, contendo:
+    A entrega deverá ser um link do projeto no GitHub, contendo o código da API e o Dockerfile, e deve haver uma documentação básica do projeto no MkDocs, contendo:
 
     - explicação do projeto - scrap do que foi feito;
     - explicação de como executar a aplicação;
@@ -139,34 +161,44 @@ O próximo passo é implantar a aplicação na AWS.
     - screenshot com os endpoints testados;
     - video de execução da aplicação - de até 1 minuto;
     - link para o docker hub do projeto;
-    - referência explícita a localização do arquivo `compose.yaml`;
-    - o arquivo `compose.yaml` FINAL (entregue) deve utilizar apenas images do docker hub (inclusive as geradas para a api), ou seja, não deve ter `build` dentro dele.
+    - referência explícita a localização do arquivo ```compose.yaml```;
+    - o arquivo ```compose.yaml``` FINAL (entregue) deve utilizar apenas images do docker hub (inclusive as geradas para a api), ou seja, não deve ter build dentro dele.
 
 ??? success "Entrega Etapa 2"
-    A entrega deverá ser um link do projeto no GitHub, o mesmo do anterior, mas para uma sessão sobre a publicação na AWS, contendo o uma breve explicação e um link para um vídeo, explicando e executando o trabalho entregue.
+    A entrega deverá ser um link do projeto no GitHub, contendo além do entregue antes (o código da API e o Dockerfile), e deve haver uma documentação básica do projeto no MkDocs, contendo:
 
-    O vídeo apresentado deve ter entre 2 e 3 minutos e **DEVE demonstrar TODOS** os seguintes itens:
-
-    - logar na conta e acessar o projeto;
-    - explicar o que foi feito e mostrar os componentes do projeto (eks, roles, etc);
-    - executar o comando `kubectl get pods` e mostrar os pods rodando;
-      ``` shell
-      kubectl get pods
-      ```
-    - mostrar o projeto executando na AWS: chamada da API por um cliente (curl, postman, etc);
-
-    No texto deve haver um link para os arquivos de configuração do Kubernetes (arquivos .yaml: deployment.yaml, service.yaml, etcs), repositório do projeto.
+    - explicação do projeto - scrap do que foi feito;
+    - explicação de como executar a aplicação;
+    - screenshot com os endpoints AWS testados;
+    - screenshot da infraestrutura funcionando na AWS;
+    - tela dos custos da conta no mesmo dia da submissão dos documentos;
+    - video de execução da aplicação funcionando no Ligthsail - de até 1 minuto mostrando o acesso e a gravação de dados no banco de dados em Cloud;
+    - para conceito B, na documentação dos custos deve ser projetado para: 1, 5 e 10 instancias de containers;
 
 ## Rubrica
 
 ??? danger "Rubrica"
 
-    | Etapa | Critério | Nota | Observações |
-    |:-:|---|:-:|:-:|
-    | 1 | API + Dockerização<br> + Docker Hub + Documentação | C |  |
-    | 2 | AWS | + 1 conceito | - 2 conceitos se não entregar a etapa do AWS |
-    |   | AWS + Documentação | + 2 conceitos |
-
+    | Critério | Observações |
+    |:----------|:------------|
+    | FastAPI funcional com Docker Compose e banco local (PostgreSQL ou MySQL) | App sobe com `docker-compose up`, banco acessível pela aplicação |
+    | Imagem publicada no Docker Hub e projeto organizado (`.env`, `.dockerignore`, estrutura clara) | Demonstra conhecimento mínimo em containerização |
+    | Documentação mínima local (`README.md`) | Instruções para build e execução, com informações da aplicação |
+    | Deploy funcional no AWS Lightsail Containers | App acessível publicamente via URL fornecida pela AWS |
+    | Banco de dados gerenciado no Lightsail funcionando e conectado à aplicação  | Uso correto de variáveis de ambiente, sem `localhost` no backend |
+    | Documentação da etapa na nuvem com instruções básicas de deploy | Link de acesso + descrição do processo de publicação |
+    | Não estourar o **custo mensal** da infraestrutura que deve ser ≤ USD 50 | Custo estimado com base nos planos usados, infração detalhada abaixo. |
+    | **Conceito C = Aprovado** se todas as partes funcionarem e forem documentadas| Projeto mínimo completo e compreensível com as entregas 1 e 2 feitas |
+    | Entregar o Conceito C | ------------ |
+    | Apresentar a **arquitetura final** do projeto em **diagrama** | Indicar os componentes: app, container, banco, rede, domínio |
+    | Informar corretamente os **recursos alocados** (plano Lightsail, RAM, CPU, tipo do DB) | Pode ser um parágrafo ou print com descrição dos planos usados |
+    | Estimar o **custo mensal** da infraestrutura (≤ USD 50) | Custo estimado com base nos planos usados, pode ser por texto ou print |
+    | **Conceito B = Aluno demonstra clareza na arquitetura e planejamento do uso de nuvem** | A entrega vai além da execução, com compreensão de recursos e custos |
+    | Entregar o Conceito B | ------------ |
+    | Documentação detalhada (ex: imagens do Lightsail, MkDocs, explicação clara do fluxo) | Entrega cuidadosa e bem comunicada |
+    | Explicação sobre a integração app ↔ banco (host, porta, segurança, variáveis) | Demonstra domínio técnico da arquitetura e da integração |
+    | Banco de Dados instalado em Instancia no Ligthsail e conectado a aplicação | Demonstra domínio adicional sobre a arquitetura e produção |
+    | **Conceito A = Entrega clara, comunicada, com domínio da solução em nuvem** | Mostra que o aluno sabe o que fez, como funciona e quanto custa |
 
 ## Docker compose
 
