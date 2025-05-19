@@ -18,7 +18,7 @@
 - [X] Roteiro 1 - Data 26/03/2025
 - [X] Roteiro 2 - Data 26/03/2025
 - [X] Roteiro 3 - Data 28/05/2025
-- [ ] Roteiro 4 - Data 28/05/2025
+- [X] Roteiro 4 - Data 28/05/2025
 - [ ] Projeto - Data 28/05/2025
 
 

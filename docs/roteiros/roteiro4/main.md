@@ -2,7 +2,7 @@
 
 O objetivo principal desse roteiro é:
 
-- entender os conceitos básicos Infraestrutura como código
+- entender os conceitos básicos de Infraestrutura como Código
 - entender os conceitos básicos sobre SLA e DR
 
 ## Roteiro
@@ -20,6 +20,27 @@ Já o OpenStack oferece uma solução de IaaS flexível, permitindo gerenciar am
 ## Infra
 
 São criados um domínio, dois projetos e dois usuários "Aluno", um em cada projeto, no OpenStack via Horizon Dashboard.
+
+### Criar um único Domain
+
+- Identity -> Domains -> Create Domain
+- nome para o domínio: AlunosDomain
+- clicar em Create Domain para finalizar a criação
+- definir o Domain criado com o novo Contexto de Uso
+
+### Criar um Projeto para cada aluno
+
+- Identity -> Projects -> Create Project
+- nome para o projeto KitU_nome_aluno e configurar qualquer quota que desejar
+- clicar em Create Project para concluir
+
+### Criar um Usuário para cada aluno
+
+- Identity -> Users -> Create User
+- fornecer o nome do usuário, e-mail, descrição, e uma senha inicial
+- selecionar o domínio criado e o projeto do aluno
+- atribuir os papéis administrativos
+- clicar em Create User para finalizar
 
 ## App
 
@@ -43,15 +64,19 @@ KitU_Aluno/
 - entrar no dashboard com o login do usuário
 - Project -> API Access
 - fazer o download do openstack rc file do usuário
-- copiar o conteudo para ```KitU_Aluno-openrc.sh```
+- copiar o conteúdo para ```KitU_Aluno-openrc.sh```
 - dar a permissão de execução para o arquivo
     ``` sh
     chmod +x KitU_Aluno-openrc.sh
     ```
 - carregando as variáveis de ambiente
-    ``` sh
-    source ~/openstack-bundles/stable/openstack-base/openrc
-    ```
+
+    ??? info "extra"
+        O comando de carregar as variáveis de ambiente no roteiro anterior foi:
+        ``` sh
+        source ~/openstack-bundles/stable/openstack-base/openrc
+        ```
+
     ``` sh
     source KitU_Aluno-openrc.sh
     ```
