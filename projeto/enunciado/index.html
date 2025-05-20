@@ -13,14 +13,14 @@
         <link rel="canonical" href="https://GiovanaCA.github.io/comp_nuvem_roteiros/projeto/enunciado/">
       
       
-        <link rel="prev" href="../../roteiros/roteiro4/main/">
+        <link rel="prev" href="../../roteiros/roteiro4/questoes/">
       
       
         <link rel="next" href="../documentacao/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -814,6 +814,8 @@
       
         
       
+        
+      
     
     
     
@@ -865,6 +867,29 @@
   
   <span class="md-ellipsis">
     Roteiro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roteiros/roteiro4/questoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Disaster Recovery e SLA
     
   </span>
   
@@ -1049,9 +1074,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aws" class="md-nav__link">
+  <a href="#aws-lightsail" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS
+      AWS Lightsail
     </span>
   </a>
   
@@ -1229,9 +1254,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aws" class="md-nav__link">
+  <a href="#aws-lightsail" class="md-nav__link">
     <span class="md-ellipsis">
-      AWS
+      AWS Lightsail
     </span>
   </a>
   
@@ -1314,12 +1339,7 @@
 
   <h1>Enunciado</h1>
 
-<div class="admonition info inline end">
-<p class="admonition-title">Info</p>
-<p>PROJETO: <strong>DUPLA</strong></p>
-<p>DEADLINE: <strong>28.mai.2025</strong></p>
-</div>
-<div class="admonition warning">
+<div class="admonition info">
 <p class="admonition-title">Enunciado original</p>
 <p>O enunciado completo do projeto se encontra na página da disciplina no link: <a href="https://insper.github.io/computacao-nuvem/projetos_2025-1/projeto/" target="_blank">https://insper.github.io/computacao-nuvem/projetos_2025-1/projeto/</a></p>
 </div>
@@ -1386,6 +1406,16 @@
 <p>Quando o código da API estiver pronto, ele deve ser dockerizado. Para isso, deve-se criar um arquivo <code>Dockerfile</code> e um <code>compose.yaml</code> para a execução da aplicação.</p>
 <p>O docker compose deve conter pelo menos 2 serviços: a aplicação e o banco de dados. A aplicação deve ser capaz de se conectar ao banco de dados e realizar as operações de CRUD.</p>
 <p>A aplicação deve ser autocontida, ou seja, deve ser possível executar a aplicação apenas com o comando <code>docker compose up</code> - pois isso é parte essencial da entrega.</p>
+<p>Para organização:</p>
+<div class="language-bash highlight"><span class="filename">estrutura de diretório sugerida</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>📁<span class="w"> </span>api/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├──<span class="w"> </span>📄<span class="w"> </span>Dockerfile
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├──<span class="w"> </span>📁<span class="w"> </span>app/
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│<span class="w">   </span>└──<span class="w"> </span>📄<span class="w"> </span>app.py
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├──<span class="w"> </span>📄<span class="w"> </span>requirements.txt
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>└──<span class="w"> </span>📄<span class="w"> </span>...
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>📄<span class="w"> </span>compose.yaml
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>📄<span class="w"> </span>.env
+</span></code></pre></div>
 <h3 id="publicacao-no-docker-hub">Publicação no Docker Hub</h3>
 <p>Após a dockerização, o projeto deve ser publicado no Docker Hub. O link do Docker Hub deve ser incluído na documentação do projeto.</p>
 <p>A publicação no docker hub deve ser feita via linha de comando. E os comandos utilizados devem ser incluídos na documentação do projeto.</p>
@@ -1403,14 +1433,14 @@
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432:5432</span><span class="w"> </span><span class="c1">#(2)!</span>
 </span></code></pre></div>
-<ol>
+<ul>
 <li>
 <p>Caso a variável de ambiente <code>POSTGRES_DB</code> não exista ou seja nula - não seja definida no arquivo <code>.env</code> - o valor padrão será <code>projeto</code>. Vide <a href="https://docs.docker.com/reference/compose-file/interpolation/" target="_blank">documentação</a>.</p>
 </li>
 <li>
 <p>Aqui é feito um túnel da porta 5432 do container do banco de dados para a porta 5432 do host (no caso localhost). Em um ambiente de produção, essa porta não deve ser exposta, pois ninguém de fora do compose deveria acessar o banco de dados diretamente.</p>
 </li>
-</ol>
+</ul>
 <div class="language-text highlight"><span class="filename">.env</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>POSTGRES_DB=meuprojeto
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>POSTGRES_USER=meuprojeto
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>POSTGRES_PASSWORD=S3cr3t
@@ -1418,13 +1448,29 @@
 <p>Ao executar, o docker compose irá utilizar as variáveis de ambiente do arquivo <code>.env</code>, caso existam, senão, utilizará os valores padrões definidos já dentro do arquivo <code>compose.yaml</code>.</p>
 </details>
 <h2 id="etapa-2">Etapa 2</h2>
-<h3 id="aws">AWS</h3>
-<p>O próximo passo é implantar a aplicação na AWS.</p>
+<h3 id="aws-lightsail">AWS Lightsail</h3>
+<p>Após a conclusão da etapa 1 do projeto com a aplicação containerizada localmente utilizando Docker Compose.</p>
+<p>Antes de iniciar, certifique-se de ter:</p>
+<ul>
+<li>Conta ativa na AWS com acesso ao Lightsail;</li>
+<li>Docker instalado e configurado;</li>
+<li>Código da aplicação FastAPI pronto e funcional localmente.</li>
+</ul>
+<p>Os próximos passos são:</p>
+<ul>
+<li>Implantar a aplicação utilizando o AWS Lightsail Container Service;</li>
+<li>Configurar um banco de dados gerenciado no Lightsail;</li>
+<li>Conectar sua aplicação ao banco de dados;</li>
+<li>Gerenciar e monitorar o custo do serviço em produção.</li>
+</ul>
+<details class="info">
+<summary>Dicas</summary>
+<p>Para mais informações sobre o Lightsail visualizar o conteúdo adicional na página <a href="https://insper.github.io/computacao-nuvem/adicional/AWSLightsail/" target:__blank_="target:&quot;_blank&quot;">lightsail</a> e para algumas dicas de configuração ver <a href="https://insper.github.io/computacao-nuvem/projetos_2025-1/projeto/#na-aba-conteudo-adicional-do-site-da-disciplina-temos-explicacoes-sobre-o-ligthsail-utilizem-como-referencia" target="_blank">dicas</a>.</p>
+</details>
 <h2 id="entregas">Entregas</h2>
 <details class="success">
 <summary>Entrega Etapa 1</summary>
-<p>A entrega deverá ser um link do projeto no GitHub, contendo o código da API e o Dockerfile.</p>
-<p>Deve haver uma documentação básica do projeto no MkDocs, contendo:</p>
+<p>A entrega deverá ser um link do projeto no GitHub, contendo o código da API e o Dockerfile, e deve haver uma documentação básica do projeto no MkDocs, contendo:</p>
 <ul>
 <li>explicação do projeto - scrap do que foi feito;</li>
 <li>explicação de como executar a aplicação;</li>
@@ -1433,22 +1479,21 @@
 <li>video de execução da aplicação - de até 1 minuto;</li>
 <li>link para o docker hub do projeto;</li>
 <li>referência explícita a localização do arquivo <code>compose.yaml</code>;</li>
-<li>o arquivo <code>compose.yaml</code> FINAL (entregue) deve utilizar apenas images do docker hub (inclusive as geradas para a api), ou seja, não deve ter <code>build</code> dentro dele.</li>
+<li>o arquivo <code>compose.yaml</code> FINAL (entregue) deve utilizar apenas images do docker hub (inclusive as geradas para a api), ou seja, não deve ter build dentro dele.</li>
 </ul>
 </details>
 <details class="success">
 <summary>Entrega Etapa 2</summary>
-<p>A entrega deverá ser um link do projeto no GitHub, o mesmo do anterior, mas para uma sessão sobre a publicação na AWS, contendo o uma breve explicação e um link para um vídeo, explicando e executando o trabalho entregue.</p>
-<p>O vídeo apresentado deve ter entre 2 e 3 minutos e <strong>DEVE demonstrar TODOS</strong> os seguintes itens:</p>
+<p>A entrega deverá ser um link do projeto no GitHub, contendo além do entregue antes (o código da API e o Dockerfile), e deve haver uma documentação básica do projeto no MkDocs, contendo:</p>
 <ul>
-<li>logar na conta e acessar o projeto;</li>
-<li>explicar o que foi feito e mostrar os componentes do projeto (eks, roles, etc);</li>
-<li>executar o comando <code>kubectl get pods</code> e mostrar os pods rodando;
-  <div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pods
-</span></code></pre></div></li>
-<li>mostrar o projeto executando na AWS: chamada da API por um cliente (curl, postman, etc);</li>
+<li>explicação do projeto - scrap do que foi feito;</li>
+<li>explicação de como executar a aplicação;</li>
+<li>screenshot com os endpoints AWS testados;</li>
+<li>screenshot da infraestrutura funcionando na AWS;</li>
+<li>tela dos custos da conta no mesmo dia da submissão dos documentos;</li>
+<li>video de execução da aplicação funcionando no Ligthsail - de até 1 minuto mostrando o acesso e a gravação de dados no banco de dados em Cloud;</li>
+<li>para conceito B, na documentação dos custos deve ser projetado para: 1, 5 e 10 instancias de containers;</li>
 </ul>
-<p>No texto deve haver um link para os arquivos de configuração do Kubernetes (arquivos .yaml: deployment.yaml, service.yaml, etcs), repositório do projeto.</p>
 </details>
 <h2 id="rubrica">Rubrica</h2>
 <details class="danger">
@@ -1456,54 +1501,106 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Etapa</th>
-<th>Critério</th>
-<th style="text-align: center;">Nota</th>
-<th style="text-align: center;">Observações</th>
+<th style="text-align: left;">Critério</th>
+<th style="text-align: left;">Observações</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1</td>
-<td>API + Dockerização<br> + Docker Hub + Documentação</td>
-<td style="text-align: center;">C</td>
-<td style="text-align: center;"></td>
+<td style="text-align: left;">FastAPI funcional com Docker Compose e banco local (PostgreSQL ou MySQL)</td>
+<td style="text-align: left;">App sobe com <code>docker-compose up</code>, banco acessível pela aplicação</td>
 </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td>AWS</td>
-<td style="text-align: center;">+ 1 conceito</td>
-<td style="text-align: center;">- 2 conceitos se não entregar a etapa do AWS</td>
+<td style="text-align: left;">Imagem publicada no Docker Hub e projeto organizado (<code>.env</code>, <code>.dockerignore</code>, estrutura clara)</td>
+<td style="text-align: left;">Demonstra conhecimento mínimo em containerização</td>
 </tr>
 <tr>
-<td style="text-align: center;"></td>
-<td>AWS + Documentação</td>
-<td style="text-align: center;">+ 2 conceitos</td>
-<td style="text-align: center;"></td>
+<td style="text-align: left;">Documentação mínima local (<code>README.md</code>)</td>
+<td style="text-align: left;">Instruções para build e execução, com informações da aplicação</td>
+</tr>
+<tr>
+<td style="text-align: left;">Deploy funcional no AWS Lightsail Containers</td>
+<td style="text-align: left;">App acessível publicamente via URL fornecida pela AWS</td>
+</tr>
+<tr>
+<td style="text-align: left;">Banco de dados gerenciado no Lightsail funcionando e conectado à aplicação</td>
+<td style="text-align: left;">Uso correto de variáveis de ambiente, sem <code>localhost</code> no backend</td>
+</tr>
+<tr>
+<td style="text-align: left;">Documentação da etapa na nuvem com instruções básicas de deploy</td>
+<td style="text-align: left;">Link de acesso + descrição do processo de publicação</td>
+</tr>
+<tr>
+<td style="text-align: left;">Não estourar o <strong>custo mensal</strong> da infraestrutura que deve ser ≤ USD 50</td>
+<td style="text-align: left;">Custo estimado com base nos planos usados, infração detalhada abaixo.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conceito C = Aprovado</strong> se todas as partes funcionarem e forem documentadas</td>
+<td style="text-align: left;">Projeto mínimo completo e compreensível com as entregas 1 e 2 feitas</td>
+</tr>
+<tr>
+<td style="text-align: left;">Entregar o Conceito C</td>
+<td style="text-align: left;">------------</td>
+</tr>
+<tr>
+<td style="text-align: left;">Apresentar a <strong>arquitetura final</strong> do projeto em <strong>diagrama</strong></td>
+<td style="text-align: left;">Indicar os componentes: app, container, banco, rede, domínio</td>
+</tr>
+<tr>
+<td style="text-align: left;">Informar corretamente os <strong>recursos alocados</strong> (plano Lightsail, RAM, CPU, tipo do DB)</td>
+<td style="text-align: left;">Pode ser um parágrafo ou print com descrição dos planos usados</td>
+</tr>
+<tr>
+<td style="text-align: left;">Estimar o <strong>custo mensal</strong> da infraestrutura (≤ USD 50)</td>
+<td style="text-align: left;">Custo estimado com base nos planos usados, pode ser por texto ou print</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conceito B = Aluno demonstra clareza na arquitetura e planejamento do uso de nuvem</strong></td>
+<td style="text-align: left;">A entrega vai além da execução, com compreensão de recursos e custos</td>
+</tr>
+<tr>
+<td style="text-align: left;">Entregar o Conceito B</td>
+<td style="text-align: left;">------------</td>
+</tr>
+<tr>
+<td style="text-align: left;">Documentação detalhada (ex: imagens do Lightsail, MkDocs, explicação clara do fluxo)</td>
+<td style="text-align: left;">Entrega cuidadosa e bem comunicada</td>
+</tr>
+<tr>
+<td style="text-align: left;">Explicação sobre a integração app ↔ banco (host, porta, segurança, variáveis)</td>
+<td style="text-align: left;">Demonstra domínio técnico da arquitetura e da integração</td>
+</tr>
+<tr>
+<td style="text-align: left;">Banco de Dados instalado em Instancia no Ligthsail e conectado a aplicação</td>
+<td style="text-align: left;">Demonstra domínio adicional sobre a arquitetura e produção</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conceito A = Entrega clara, comunicada, com domínio da solução em nuvem</strong></td>
+<td style="text-align: left;">Mostra que o aluno sabe o que fez, como funciona e quanto custa</td>
 </tr>
 </tbody>
 </table>
 </details>
 <h2 id="docker-compose">Docker compose</h2>
 <h3 id="material-de-aula">Material de aula</h3>
-<div class="language-text highlight"><span class="filename">estrutura para dois containers num mesmo compose</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>api
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  Dockerfile
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>web
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  Dockerfile
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  hello.txt
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>.env
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>compose.yaml
+<div class="language-text highlight"><span class="filename">estrutura para dois containers num mesmo compose</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>api
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  Dockerfile
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>web
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  Dockerfile
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  hello.txt
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>.env
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>compose.yaml
 </span></code></pre></div>
 <h3 id="comandos">Comandos</h3>
 <ul>
 <li>
 <p>Executando o docker compose:
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>--build
 </span></code></pre></div></p>
 </li>
 <li>
 <p>Parando o docker compose:
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
 </span></code></pre></div></p>
 </li>
 </ul>
@@ -1563,10 +1660,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.path", "navigation.tracking", "navigation.expand", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.path", "navigation.tracking", "navigation.expand", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="../../assets/_markdown_exec_pyodide.js"></script>
       

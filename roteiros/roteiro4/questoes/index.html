@@ -10,13 +10,13 @@
         <meta name="author" content="Cassoni Andrade, G.; Hix, L.">
       
       
-        <link rel="canonical" href="https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiros/roteiro2/main/">
+        <link rel="canonical" href="https://GiovanaCA.github.io/comp_nuvem_roteiros/roteiros/roteiro4/questoes/">
       
       
-        <link rel="prev" href="../../roteiro1/main/">
+        <link rel="prev" href="../main/">
       
       
-        <link rel="next" href="../../roteiro3/main/">
+        <link rel="next" href="../../../projeto/enunciado/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Roteiro - Computação em Nuvem</title>
+        <title>Disaster Recovery e SLA - Computação em Nuvem</title>
       
     
     
@@ -132,7 +132,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objetivo" class="md-skip">
+        <a href="#criando-um-plano-de-disaster-recovery-e-sla" class="md-skip">
           Skip to content
         </a>
       
@@ -166,7 +166,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Roteiro
+              Disaster Recovery e SLA
             
           </span>
         </div>
@@ -630,8 +630,6 @@
                 
   
   
-    
-  
   
   
     
@@ -651,11 +649,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
@@ -671,7 +671,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Roteiro 2 JUJU
@@ -682,30 +682,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Roteiro
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../roteiro2/main/" class="md-nav__link">
         
   
   
@@ -716,84 +696,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objetivo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roteiro" class="md-nav__link">
-    <span class="md-ellipsis">
-      Roteiro
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#montagem-do-roteiro" class="md-nav__link">
-    <span class="md-ellipsis">
-      Montagem do Roteiro
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Montagem do Roteiro">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#infra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Infra
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deployment-orchestration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deployment Orchestration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusão
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -919,8 +821,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -940,13 +844,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
@@ -962,7 +864,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Roteiro 4
@@ -976,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../roteiro4/main/" class="md-nav__link">
+      <a href="../main/" class="md-nav__link">
         
   
   
@@ -996,10 +898,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../roteiro4/questoes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1010,6 +921,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1151,74 +1063,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objetivo
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roteiro" class="md-nav__link">
-    <span class="md-ellipsis">
-      Roteiro
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#montagem-do-roteiro" class="md-nav__link">
-    <span class="md-ellipsis">
-      Montagem do Roteiro
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Montagem do Roteiro">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#infra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Infra
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deployment-orchestration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deployment Orchestration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusão
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1237,63 +1083,35 @@
   
 
 
-  <h1>Roteiro</h1>
-
-<h2 id="objetivo">Objetivo</h2>
-<p>O objetivo principal desse roteiro é:</p>
+<h1 id="criando-um-plano-de-disaster-recovery-e-sla">Criando um plano de Disaster Recovery e SLA</h1>
+<p><strong>Você é o CTO (Chief Technology Officer) de uma grande empresa com sede em várias capitais no Brasil e precisa implantar um sistema crítico, de baixo custo e com dados sigilosos para a área operacional.</strong></p>
+<p><strong>A. Você escolheria Public Cloud ou Private Cloud?</strong></p>
+<p>Para as tarefas de processamento, seria beneficial escolher uma Public Cloud, devido à alta disponibilidade e escalabilidade. E para as tarefas que requerem maior segurança seria melhor uma Private Cloud, proporcionando um  maior controle da segurança de dados sigilosos e uma baixa latência para trabalhos. Logo, uma boa escolha seria fazer uma Nuvem Híbrida, possuindo boa segurança e flexibilidade, mas vale-se mencionar que é complexo integrar e gerenciar os ambientes das duas nuvens eficientemente e que os funcionários devem possuir a habilidade de lidar com os dois ambientes. </p>
+<p><strong>B. Agora explique para ao RH por que você precisa de um time de DevOps.</strong></p>
+<p>Um time de DevOps é necessário, uma vez que, além de fornecer uma  grande escalabilidade e eficiência, ele seria responsável por atualizações e melhorias periódicas, pela automação de processos e pelo monitoramento, rapidamente identificando problemas e implementando soluções.</p>
+<p><strong>C. Considerando o mesmo sistema crítico, agora sua equipe deverá planejar e implementar um ambiente resiliente e capaz de mitigar  possíveis interrupções/indisponibilidades. Para isso, identifiquem quais são as principais ameaças que podem colocar sua infraestrutura em risco, e descreva as principais ações que possibilitem o restabelecimento de todas as aplicações de forma rápida e organizada caso algum evento cause uma interrupção ou incidente de segurança. Para isso monte um plano de DR e HA que considere entre as ações:</strong></p>
 <ul>
-<li>entender os conceitos básicos sobre uma plataforma de gerenciamento de aplicações distribuídas</li>
-<li>entender os conceitos básicos de comunicação entre aplicações e serviços</li>
+<li><strong>Mapeamento das principais ameaças que podem colocar em riscos o seu ambiente.</strong></li>
+<li><strong>Elenque e priorize as ações para a recuperação de seu ambiente em uma possível interrupção/desastre.</strong></li>
+<li><strong>Como sua equipe irá tratar a política de backup?</strong></li>
+<li><strong>Considerando possíveis instabilidades e problemas, descreva como alta disponibilidade será implementada em sua infraestrutura.</strong></li>
 </ul>
-<h2 id="roteiro">Roteiro</h2>
-<p>Para visualizar o arquivo PDF feito e entregue, consultar o link a seguir: <strong><a href="../Roteiro_2_de_Cloud.pdf">Roteiro 2 - PDF</a></strong>.</p>
-<h2 id="montagem-do-roteiro">Montagem do Roteiro</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>O formato e a quantidade de tarefas do roteiro feito (em 2024.2) é diferente do enunciado (de 2025.1), porém comentários são feitos para melhor compreensão e é majoritariamente seguido o mesmo conteúdo.</p>
-</div>
-<h3 id="infra">Infra</h3>
-<p>Para criar a infraestrutura, foi instalado o Juju, realizando todas as configurações necessárias.</p>
-<h3 id="deployment-orchestration">Deployment Orchestration</h3>
-<p>Instalados o Dashboard do Juju, o Grafana e o Prometheus, e é feito o deploy das aplicações Grafana e Prometheus com o auxilio do Juju. Por fim, integra-se o Grafana com o Prometheus.</p>
-<details class="tarefa-1">
-<summary>Tarefa-1</summary>
-<ol>
-<li>De um print da tela do Dashboard do MAAS com as Maquinas e seus respectivos IPs.</li>
-<li>De um print de tela do comando "juju status" depois que o Grafana estiver "active". </li>
-<li>De um print da tela do Dashboard do Grafana com o Prometheus aparecendo como source.</li>
-<li>Prove (print) que você está conseguindo acessar o Dashboard a partir da rede do Insper.</li>
-<li>De um print na tela que mostra as aplicações sendo gerenciadas pelo JUJU (http://IP-Serviço:8080/models/admin/maas)</li>
-</ol>
-<p><strong>No roteiro que fizemos as telas dos pontos 4 e 5 não foram requeridas</strong>.</p>
-<figure>
-<p><a class="glightbox" href="../imgs/roteiro2-008.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Dashboard do MAAS" src="../imgs/roteiro2-008.png" /></a></p>
-<figcaption>
-<p>Figura 1 - Dashboard do MAAS com as máquinas e seus respectivos IPs </p>
-</figcaption>
-</figure>
-<figure>
-<p><a class="glightbox" href="../imgs/roteiro2-009.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Juju status" src="../imgs/roteiro2-009.png" /></a></p>
-<figcaption>
-<p>Figura 2 - Comando “juju status” com o Grafana ativo </p>
-</figcaption>
-</figure>
-<figure>
-<p><a class="glightbox" href="../imgs/roteiro2-010.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Dashboard do Grafana" src="../imgs/roteiro2-010.png" /></a></p>
-<figcaption>
-<p>Figura 3 - Dashboard do Grafana com o Prometheus aparecendo como source </p>
-</figcaption>
-</figure>
-<figure>
-<p><a class="glightbox" href="../imgs/roteiro2-011.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tunelamento com o Grafana" src="../imgs/roteiro2-011.png" /></a></p>
-<figcaption>
-<p>Figura 4 - Comando do tunelamento com o Grafana </p>
-</figcaption>
-</figure>
-</details>
-<h2 id="conclusao">Conclusão</h2>
-<p>Este roteiro demonstra o uso do Juju para orquestração de deployment em infraestrutura Bare Metal, simplificando a configuração e gerenciamento de serviços. A instalação do Juju Dashboard facilita a administração visual da infraestrutura, melhorando a usabilidade e monitoramento.</p>
-<p>A utilização do Juju para implantar o Grafana e o Prometheus destaca a automação no gerenciamento de aplicações, reduzindo a complexidade do deploy e garantindo consistência na configuração. A integração entre essas ferramentas permite a coleta e visualização de métricas em tempo real, essencial para a observabilidade e monitoramento eficaz da infraestrutura.</p>
+<p>Ameaças:</p>
+<ul>
+<li>Ataques hackers, falhas de hardware, erro humano e instabilidade de rede. </li>
+</ul>
+<p>Recuperação de ambiente:</p>
+<ul>
+<li>Backup automatizado e servidores redundantes. </li>
+</ul>
+<p>Política de backup:</p>
+<ul>
+<li>Frequente, criptografia e armazenar em mais de um servidor. </li>
+</ul>
+<p>Alta disponibilidade:</p>
+<ul>
+<li>Load balancer e estratégia de multi-cloud.</li>
+</ul>
 
 
 
