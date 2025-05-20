@@ -324,10 +324,10 @@ Figura 10 - Custo dos 2 containers no projeto.
 
 Agora, levando em consideração que é utilizado um banco de dados, é apresentada a Figura 11, sendo adotado o Plano Standard de 15 USD por mês.
 
-![CustoBanco](imgs/custo_banco.png)
+<!-- ![CustoBanco](imgs/custo_banco.png)
 /// caption
 Figura 11 - Custo dos bancos de dados.
-///
+/// -->
 
 Todas as escolhas de containers e banco de dados feitas são explicadas por serem os planos mais baratos que atendem às necessidades do projeto.
 
