@@ -191,7 +191,7 @@ Certifique-se de substituir `seu_usuario_docker` pelo seu nome de usuário no Do
 
 ### Imagem Docker
 
-Disponível em: [peng1104/projeto_cloud](https://hub.docker.com/r/peng1104/projeto_cloud)
+Imagem Docker do projeto disponível em: [peng1104/projeto_cloud](https://hub.docker.com/r/peng1104/projeto_cloud)
 
 ### Screenshots dos Endpoints
 
@@ -217,64 +217,171 @@ Figura 3 - Endpoint de consulta.
 
 ### O que foi feito?
 
-- explicação do projeto - scrap do que foi feito;
+Nesta Etapa 2, a aplicação desenvolvida na Etapa 1 foi implantada utilizando o AWS Lightsail Container Service. Além disso, foi configurado um banco de dados gerenciado no Lightsail, que foi conectado à aplicação de forma segura.
 
-- Explicação sobre a integração app ↔ banco (host, porta, segurança, variáveis)
-- Explicação do Banco de Dados instalado em Instancia no Ligthsail e conectado a aplicação
+Para que a aplicação consiga se comunicar corretamente com o banco de dados, é necessário fornecer as informações de conexão (como host, porta, usuário, senha e nome do banco) por meio de variáveis de ambiente.
+
+Essas variáveis são utilizadas no código da aplicação para estabelecer a conexão com o banco de forma dinâmica, sem necessidade de deixar dados sensíveis (como senhas) diretamente no código-fonte.
+
+Além disso, como tanto a aplicação quanto o banco estão hospedados no Lightsail e configurados para estarem na mesma rede privada, essa comunicação ocorre de forma mais segura e eficiente, sem exposição pública dos serviços.
+
+``` env title="Exemplo mostrado na etapa anterior"
+POSTGRES_HOST=postgres   --> Hostname do banco de dados no serviço do Lightsail
+POSTGRES_PORT=5432   --> Porta padrão do PostgreSQL
+POSTGRES_DB=db_app   --> Nome do banco de dados criado
+POSTGRES_USER=humberto   --> Usuário autorizado a acessar o banco
+POSTGRES_PASSWORD=gabriela   --> Senha do usuário do banco
+
+APP_PORT=8080   --> Porta em que a aplicação será executada no container
+JWT_SECRET=750fc55c0a404f8485580fd4bbcf6d7e   --> Semente para gerar as chaves
+```
 
 ### Como executar
 
- - explicação de como executar a aplicação;
+Autenticado na conta AWS e acessando o console do AWS Lightsail, foram seguidos os passos abaixo para executar a aplicação:
+
+1. Criando o banco de dados:
+    - Banco de dados -> Criar banco de dados
+    - Selecionado PostgreSQL, a região desejada e o plano
+    - Definido o nome do banco, usuário e a senha
+    - Anotado o endpoint interno do banco para utilizar como POSTGRES_HOST
+    - Aguardando até o banco estar pronto
+
+2. Criando o serviço de container:
+    - Containers -> Criar serviço de container
+    - Escolhida a imagem da aplicação do Docker Hub
+    - Definido o número de containers e a porta de escuta
+    - No campo variáveis de ambiente, inseridas as variáveis do .env
+    - Finalizada a criação do serviço
 
 ### Screenshots dos Endpoints
 
-- screenshot com os endpoints AWS testados;
-
-![](imgs/)
+#### Tela de Registro
+![RegistrarAWS](imgs/registrar_aws.png)
 /// caption
-Figura X - .
+Figura 4 - Endpoint de registro na AWS.
+///
+
+#### Tela de Consulta
+![ConsultarAWS](imgs/consultar_aws.png)
+/// caption
+Figura 5 - Endpoint de consulta na AWS.
+///
+
+#### Tela de Checagem da saúde
+![HealthCheck1](imgs/health_check1.png)
+![HealthCheck2](imgs/health_check2.png)
+/// caption
+Figura 6 - Endpoint de saúde, mostrando funcionamento do load balance.
 ///
 
 ### Screenshot da infraestrutura funcionando na AWS
 
-- screenshot da infraestrutura funcionando na AWS;
-
-![](imgs/)
+#### Tela demonstrando funcionamento da aplicação
+![Aplicacao](imgs/aplicacao.jpeg)
 /// caption
-Figura X - .
+Figura 7 - Aplicação funcionando.
+///
+
+#### Tela demonstrando a base de dados
+![BaseDeDados](imgs/database.jpeg)
+/// caption
+Figura 8 - Base de dados.
 ///
 
 ### Custos
 
-- tela dos custos da conta no mesmo dia da submissão dos documentos;
+A seguir temos a Figura 9 com os preços dos containers de diferentes tamanhos.
 
-![](imgs/)
+![CustoContainers](imgs/custo_containers.png)
 /// caption
-Figura X - .
+Figura 9 - Custo dos containers.
 ///
 
-#### Projetar para 1, 5 e 10 instâncias de containers
+A decisão foi de utilizar containers Nano, os quais possuem preço de 7 USD. O preço é linear, com um acréscimo de 7 USD a cada novo container, a utilização de 2 containers nesse projeto leva a um custo de 14 USD por mês (Figura 10).
 
-- para conceito B, na documentação dos custos deve ser projetado para: 1, 5 e 10 instancias de containers;
+![CustoContainersProjeto](imgs/custo_aws.jpeg)
+/// caption
+Figura 10 - Custo dos 2 containers no projeto.
+///
+
+??? tip "Consultar preços"
+
+    Para mais informações sobre os preços, consultar: [https://aws.amazon.com/pt/lightsail/pricing/](https://aws.amazon.com/pt/lightsail/pricing/){target:"_blank"}
+
+???+ abstract "Projeção"
+
+    Fazendo uma projeção do custo para 1, 5 e 10 instâncias de containers, chegamos nos dados da Tabela 1 a seguir:
+
+    | Nº de containers |    Valor    |
+    | :--------------: | :---------: |
+    |        1         |    7 USD    |
+    |        5         |    35 USD   | 
+    |        10        |    70 USD   | 
+    /// caption
+    Tabela 1 - Projeção de preços.
+    ///
+
+Agora, levando em consideração que é utilizado um banco de dados, é apresentada a Figura 11, sendo adotado o Plano Standard de 15 USD por mês.
+
+![CustoBanco](imgs/custo_banco.png)
+/// caption
+Figura 11 - Custo dos bancos de dados.
+///
+
+Todas as escolhas de containers e banco de dados feitas são explicadas por serem os planos mais baratos que atendem às necessidades do projeto.
+
+**Custos do projeto:**
+
+|                |    Valor    |
+| :------------: | :---------: |
+|  2 containers  |    14 USD   |
+|   1 banco      |    15 USD   | 
+|   **TOTAL**    |  **29 USD** |
+/// caption
+Tabela 2 - Custos do projeto. 
+///
+
+O custo da conta no dia da submissão é mostrado na Figura 12 abaixo:
+
+![CustoFinal](imgs/custo_final.png)
+/// caption
+Figura 12 - Custo final da conta.
+///
 
 ## Arquitetura final 
 
-- Apresentar a arquitetura final do projeto em diagrama
+``` mermaid
+flowchart LR
+    subgraph private [escrever]
+        direction TB
+        lb e3@==> api1["<div>API 1<br>porta:8080</div>"]
+        lb e4@==> api2["<div>API 2<br>porta:8080</div>"]
+        api1 e5@==> db
+        api2 e6@==> db
+    end
+    https["<div>HTTPS<br>porta:443</div>"] e1@==> http
+    http["<div>HTTP<br>porta:80</div>"] e2@==> lb
+    e1@{ animate: true }
+    e2@{ animate: true }
+    e3@{ animate: true }
+    e4@{ animate: true }
+    e5@{ animate: true }
+    e6@{ animate: true }
+    lb@{ shape: div-rect, label: "Load Balancer\nporta:80" }
+    db@{ shape: cyl, label: "PostgreSQL\nporta:5432" }
+```
 
 ## Videos demonstrativos
 
 Aqui estão dois vídeos demonstrativos das Etapas 1 e 2 do projeto:
 
-- video de execução da aplicação - de até 1 minuto;
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rpISwUK8aME" 
-frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rpISwUK8aME" frameborder="0" allowfullscreen></iframe>
 /// caption
 Vídeo 1 - Etapa 1 do projeto.
 ///
 
-
+<iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
 /// caption
 Vídeo 2 - Etapa 2 do projeto.
 ///
-- video de execução da aplicação funcionando no Ligthsail - de até 1 minuto mostrando o acesso e a gravação de dados no banco de dados em Cloud;
