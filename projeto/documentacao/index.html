@@ -2134,13 +2134,14 @@
 </figure>
 </details>
 <p>Agora, levando em consideração que é utilizado um banco de dados, é apresentada a Figura 11, sendo adotado o Plano Standard de 15 USD por mês.</p>
-<!-- ![CustoBanco](imgs/custo_banco.png)
-/// caption
-Figura 11 - Custo dos bancos de dados.
-/// -->
-
+<figure>
+<p><a class="glightbox" href="../imgs/custo_banco.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="CustoBanco" src="../imgs/custo_banco.png" /></a></p>
+<figcaption>
+<p>Figura 11 - Custo dos bancos de dados.</p>
+</figcaption>
+</figure>
 <p>Todas as escolhas de containers e banco de dados feitas são explicadas por serem os planos mais baratos que atendem às necessidades do projeto.</p>
-<p><strong>Custos do projeto:</strong></p>
+<p><strong>Custos do projeto por mês:</strong></p>
 <figure>
 <table>
 <thead>
@@ -2155,26 +2156,32 @@ Figura 11 - Custo dos bancos de dados.
 <td style="text-align: center;">14 USD</td>
 </tr>
 <tr>
-<td style="text-align: center;">1 banco</td>
+<td style="text-align: center;">1 banco (postgres)</td>
 <td style="text-align: center;">15 USD</td>
 </tr>
 <tr>
+<td style="text-align: center;">taxas</td>
+<td style="text-align: center;">X  USD</td>
+</tr>
+<tr>
 <td style="text-align: center;"><strong>TOTAL</strong></td>
-<td style="text-align: center;"><strong>29 USD</strong></td>
+<td style="text-align: center;"><strong>29 + X USD</strong></td>
 </tr>
 </tbody>
 </table>
 <figcaption>
-<p>Tabela 2 - Custos do projeto. </p>
+<p>Tabela 2 - Custos do projeto por mês. </p>
 </figcaption>
 </figure>
 <p>O custo da conta no dia da submissão é mostrado na Figura 12 abaixo:</p>
 <figure>
-<p><a class="glightbox" href="imgs/custo_final.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="CustoFinal" src="imgs/custo_final.png" /></a></p>
+<p><a class="glightbox" href="../imgs/custo_final.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="CustoFinal" src="../imgs/custo_final.png" /></a></p>
 <figcaption>
 <p>Figura 12 - Custo final da conta.</p>
 </figcaption>
 </figure>
+<p>A conta da AWS utilizada nesse projeto também é utilizado para outro projeto, o qual involve outros serviços com o Elastic Compute Cloud, o Elastic Container, AmazonCloudWatch, entre outros.</p>
+<p>Os únicos custos pertencentes à este projeto são "Amazon Lightsail" e as taxas do mesmo, que não pode ser considerado esse valor completo, por incluir os outros serviços.</p>
 <h2 id="arquitetura-final">Arquitetura final</h2>
 <pre class="mermaid"><code>flowchart LR
     subgraph private [escrever]
@@ -2203,7 +2210,7 @@ Figura 11 - Custo dos bancos de dados.
 </figcaption>
 </figure>
 <figure>
-<iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/1uKJCzuqf50" frameborder="0" allowfullscreen></iframe>
 <figcaption>
 <p>Vídeo 2 - Etapa 2 do projeto.</p>
 </figcaption>
