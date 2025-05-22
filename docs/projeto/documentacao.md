@@ -324,22 +324,23 @@ Figura 10 - Custo dos 2 containers no projeto.
 
 Agora, levando em consideração que é utilizado um banco de dados, é apresentada a Figura 11, sendo adotado o Plano Standard de 15 USD por mês.
 
-<!-- ![CustoBanco](imgs/custo_banco.png)
+![CustoBanco](imgs/custo_banco.png)
 /// caption
 Figura 11 - Custo dos bancos de dados.
-/// -->
+///
 
 Todas as escolhas de containers e banco de dados feitas são explicadas por serem os planos mais baratos que atendem às necessidades do projeto.
 
-**Custos do projeto:**
+**Custos do projeto por mês:**
 
-|                |    Valor    |
-| :------------: | :---------: |
-|  2 containers  |    14 USD   |
-|   1 banco      |    15 USD   | 
-|   **TOTAL**    |  **29 USD** |
+|                   |    Valor        |
+| :---------------: | :-------------: |
+|     2 containers  |      14 USD     |
+| 1 banco (postgres)|      15 USD     |
+|        taxas      |      X  USD     |
+|      **TOTAL**    |  **29 + X USD** |
 /// caption
-Tabela 2 - Custos do projeto. 
+Tabela 2 - Custos do projeto por mês. 
 ///
 
 O custo da conta no dia da submissão é mostrado na Figura 12 abaixo:
@@ -348,6 +349,10 @@ O custo da conta no dia da submissão é mostrado na Figura 12 abaixo:
 /// caption
 Figura 12 - Custo final da conta.
 ///
+
+A conta da AWS utilizada nesse projeto também é utilizado para outro projeto, o qual involve outros serviços com o Elastic Compute Cloud, o Elastic Container, AmazonCloudWatch, entre outros.
+
+Os únicos custos pertencentes à este projeto são "Amazon Lightsail" e as taxas do mesmo, que não pode ser considerado esse valor completo, por incluir os outros serviços.
 
 ## Arquitetura final 
 
@@ -381,7 +386,7 @@ Aqui estão dois vídeos demonstrativos das Etapas 1 e 2 do projeto:
 Vídeo 1 - Etapa 1 do projeto.
 ///
 
-<iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/1uKJCzuqf50" frameborder="0" allowfullscreen></iframe>
 /// caption
 Vídeo 2 - Etapa 2 do projeto.
 ///
